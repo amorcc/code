@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+  有关如何配置 ASP.NET 应用程序的详细信息，请访问
+  http://go.microsoft.com/fwlink/?LinkId=301879
+  -->
+<configuration>
+  <connectionStrings>
+    <add name="B2B_DB" connectionString="server=106.3.44.156;database=TXJC;uid=cc;pwd=amorcc2564130;Enlist=true;Pooling=true;Max Pool Size = 5120;Min Pool Size=0; Connection Lifetime=30;packet size=1024" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <appSettings>
+    <!--Session过期时间：分-->
+    <add key="SessionTimeMin" value="40"/>
+    <add key="WxRedir" value="http://m.tianxiajiancai.com/wxgetopenid"/>
+    <add key="WapSiteUrl" value="http://localhost:8080/"/>
+    <add key="ApiSiteUrl" value="http://localhost:809/"/>
+    <!--微信公众号配置-->
+    <add key="appid" value="wx3241c2f4565fa11c"/>
+    <add key="secret" value="ad692205c3d8e5068f88dc73d8728085"/>
+    <!--微信支付商户号-->
+    <add key="mchid" value="1439168502"/>
+    <!--微信支付密钥-->
+    <add key="wxpaykey" value="089022e9b4e053d9dde74aeae3e6ad34"/>
+    <!--<add key="wxpaykey" value="tianxiajiancaitianxiajiancai1234"/>-->
+    <!--微信支付回调页面-->
+    <add key="wxpaynotifyurl" value="http://api.tianxiajiancai.com.cn/WeChat/wx_pay_notify.aspx"/>
+    <!--支付宝合作伙伴身份ID-->
+    <add key="partner" value="2088521412349397"/>
+    <add key="md5_key" value="ctl69mxp9y542x8lbjwjmzljfhkg9dpp"/>
+    <add key="alipay_notify_url" value="http://api.tianxiajiancai.com.cn/Alipay/alipay_notify_url.aspx"/>
+    <add key="alipay_return_url" value="http://m.tianxiajiancai.com.cn/#/bol/2"/>
+  </appSettings>
+  <!--
+    有关 web.config 更改的说明，请参见 http://go.microsoft.com/fwlink/?LinkId=235367。
+
+    可在 <httpRuntime> 标记上设置以下特性。
+      <system.Web>
+        <httpRuntime targetFramework="4.5" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation debug="true" targetFramework="4.5"/>
+    <httpRuntime targetFramework="4.5" maxRequestLength="1048576" executionTimeout="3600"/>
+  </system.web>
+  <system.webServer>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0"/>
+      <!--
+      <remove name="OPTIONSVerbHandler"/>
+      -->
+      <remove name="TRACEVerbHandler"/>
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0"/>
+    </handlers>
+    <httpProtocol>
+      <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="*"/>
+      </customHeaders>
+    </httpProtocol>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30AD4FE6B2A6AEED" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

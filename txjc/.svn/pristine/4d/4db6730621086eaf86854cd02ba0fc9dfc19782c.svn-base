@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.11.1.min.js"></script>
+    <link href="/static/css/bootstrap.min.css" rel="Stylesheet" type="text/css" />
+    <link href="/static/css/bootstrap-theme.min.css" rel="Stylesheet" type="text/css" />
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/config/webconfig.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="/static/css/txjc.css" rel="Stylesheet" type="text/css" />
+    <link href="/static/css/cc.css" rel="Stylesheet" type="text/css" />
+    <title>支付页面--河狸NO.1内测版--建材行业B2B解决方案</title>
+</head>
+
+<body>
+    <div class="main" style="max-width:790px; ">
+
+        <div class="alert alert-success mt60 ml20 mr20" role="alert">正在准备微信支付，请稍候…………</div>
+        <!-- built files will be auto injected -->
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var ordercodes = getQueryString('OrderCodes');
+            var payType = getQueryString('PayType');
+            var rn = getQueryString('rn');
+
+            debugger;
+
+            if (typeof WeixinJSBridge == "undefined") {
+                if (document.addEventListener) {
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall(rn, ordercodes, payType), false);
+                } else if (document.attachEvent) {
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall(rn, ordercodes, payType));
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall(rn, ordercodes, payType));
+                }
+            } else {
+                jsApiCall(rn, ordercodes, payType);
+            }
+        });
+
+
+        //调用微信JS api 支付
+        function jsApiCall(rn, ordercode, payType) {
+
+            var url = G_API_URL + "/api/WX/H5Pay";
+            var para = {};
+            para.Openid = localStorage.getItem('openid');
+            para.OrderCodes = ordercode;
+            para.token = localStorage.getItem('token');
+            para.PayType = payType;
+            para.rn = rn;
+
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: para,
+                dataType: 'JSON',
+                success: function(data) {
+                    if (data && data.ResponseID == 0) {
+                        var mweb_url = data.Data.mweb_url;
+                        mweb_url += '&redirect_url=http%3a%2f%2fm.tianxiajiancai.com.cn%2f%23%2fbol%2f2';
+
+                        location.href = mweb_url;
+                    } else {
+                        alert('错误，' + data.Message);
+                    }
+                },
+                complete() {},
+                error() {
+                    alert('调用支付接口出错');
+                },
+            });
+
+
+        }
+    </script>
+</body>
+
+</html>

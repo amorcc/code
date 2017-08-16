@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2893B3F8-7E79-47DB-A74C-DAADC0CCF899}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSDC</RootNamespace>
+    <AssemblyName>SSDC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfoVersion.cs">
+      <Link>AssemblyInfoVersion.cs</Link>
+    </Compile>
+    <Compile Include="AnalysisDataHint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisDataHint.Designer.cs">
+      <DependentUpon>AnalysisDataHint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisIdNumberHint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisIdNumberHint.Designer.cs">
+      <DependentUpon>AnalysisIdNumberHint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisResult.Designer.cs">
+      <DependentUpon>AnalysisResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CCButton.Designer.cs">
+      <DependentUpon>CCButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContrastResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContrastResult.Designer.cs">
+      <DependentUpon>ContrastResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataQuery.Designer.cs">
+      <DependentUpon>DataQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSourceMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSourceMng.Designer.cs">
+      <DependentUpon>DataSourceMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HintForm.Designer.cs">
+      <DependentUpon>HintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData.Designer.cs">
+      <DependentUpon>ImportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDataMulti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportDataMulti.Designer.cs">
+      <DependentUpon>ImportDataMulti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportProgress.Designer.cs">
+      <DependentUpon>ImportProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportProgress3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportProgress3.Designer.cs">
+      <DependentUpon>ImportProgress3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportRecord.Designer.cs">
+      <DependentUpon>ImportRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyTableName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyTableName.Designer.cs">
+      <DependentUpon>ModifyTableName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\PageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyControl\PageControl.Designer.cs">
+      <DependentUpon>PageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenDBHint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenDBHint.Designer.cs">
+      <DependentUpon>OpenDBHint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnalysisDataHint.resx">
+      <DependentUpon>AnalysisDataHint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisIdNumberHint.resx">
+      <DependentUpon>AnalysisIdNumberHint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisResult.resx">
+      <DependentUpon>AnalysisResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCButton.resx">
+      <DependentUpon>CCButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContrastResult.resx">
+      <DependentUpon>ContrastResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataQuery.resx">
+      <DependentUpon>DataQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSourceMng.resx">
+      <DependentUpon>DataSourceMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HintForm.resx">
+      <DependentUpon>HintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportData.resx">
+      <DependentUpon>ImportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDataMulti.resx">
+      <DependentUpon>ImportDataMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportProgress.resx">
+      <DependentUpon>ImportProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportProgress3.resx">
+      <DependentUpon>ImportProgress3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportRecord.resx">
+      <DependentUpon>ImportRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyTableName.resx">
+      <DependentUpon>ModifyTableName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControl\PageControl.resx">
+      <DependentUpon>PageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenDBHint.resx">
+      <DependentUpon>OpenDBHint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSDC_Common\SSDC_Common.csproj">
+      <Project>{3223abee-fb19-4925-bb52-7e32637569ea}</Project>
+      <Name>SSDC_Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSDC_DAL\SSDC_DAL.csproj">
+      <Project>{9841fa66-2dc9-42bf-bf27-5e91fecbfa48}</Project>
+      <Name>SSDC_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSDC_Model\SSDC_Model.csproj">
+      <Project>{5a89721e-9624-430b-a32e-b7deb33c5c6d}</Project>
+      <Name>SSDC_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选项卡.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选项卡2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选项卡3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\tishi.png" />
+    <None Include="Resources\chuangti.png" />
+    <Content Include="系统图标%281%29.ico" />
+    <None Include="Resources\3关闭-正常.png" />
+    <None Include="Resources\3最大化-正常.png" />
+    <None Include="Resources\3最小化-正常.png" />
+    <None Include="Resources\4分析结果-3.png" />
+    <None Include="Resources\4数据分析-2.png" />
+    <None Include="Resources\4导入数据-3.png" />
+    <None Include="Resources\4数据查询-3.png" />
+    <None Include="Resources\4数据源管理-3.png" />
+    <None Include="Resources\4数据导入记录-3.png" />
+    <None Include="Resources\4系统设置-3.png" />
+    <None Include="Resources\4导入数据-1.png" />
+    <None Include="Resources\4数据分析-1.png" />
+    <None Include="Resources\4导入数据-11.png" />
+    <None Include="Resources\4数据查询-1.png" />
+    <None Include="Resources\4数据源管理-1.png" />
+    <None Include="Resources\4数据导入记录-1.png" />
+    <None Include="Resources\4系统设置-1.png" />
+    <None Include="Resources\4导入数据-31.png" />
+    <None Include="Resources\4分析结果-2.png" />
+    <None Include="Resources\1上中.png" />
+    <None Include="Resources\6页签按钮2.png" />
+    <None Include="Resources\6页签按钮1.png" />
+    <None Include="Resources\00002按钮背景.png" />
+    <None Include="Resources\4分析结果-1.png" />
+    <None Include="Resources\4数据分析-21.png" />
+    <None Include="Resources\4数据分析-3.png" />
+    <None Include="Resources\4导入数据-2.png" />
+    <None Include="Resources\4数据查询-2.png" />
+    <None Include="Resources\4数据源管理-2.png" />
+    <None Include="Resources\4数据导入记录-2.png" />
+    <None Include="Resources\4系统设置-2.png" />
+    <None Include="Resources\3关闭-移上.png" />
+    <None Include="Resources\3最大化-移上.png" />
+    <None Include="Resources\3最小化-移上.png" />
+    <None Include="Resources\05通用按钮-1.png" />
+    <None Include="Resources\05通用按钮-3.png" />
+    <None Include="Resources\6页签按钮3.png" />
+    <Content Include="学教互联.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)..\BuildAssemblyVersion.bat</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

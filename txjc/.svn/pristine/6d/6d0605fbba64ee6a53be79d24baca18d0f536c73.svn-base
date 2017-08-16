@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D040819A-91D4-43B4-9ACB-A30AF5C71F10}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cc.webapi</RootNamespace>
+    <AssemblyName>cc.webapi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Alipay\alipay_notify_url.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="LogMng\jquery-1.8.1.min.js" />
+    <Content Include="LogMng\log4net_init.aspx" />
+    <Content Include="LogMng\index.html" />
+    <Content Include="LogMng\vue.js" />
+    <Content Include="Web.config" />
+    <Content Include="WeChat\wx_pay_notify.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoVersion.cs">
+      <Link>AssemblyInfoVersion.cs</Link>
+    </Compile>
+    <Compile Include="Alipay\alipay_notify_url.aspx.cs">
+      <DependentUpon>alipay_notify_url.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alipay\alipay_notify_url.aspx.designer.cs">
+      <DependentUpon>alipay_notify_url.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AddressController.cs" />
+    <Compile Include="Controllers\AlipayController.cs" />
+    <Compile Include="Controllers\AreaMngController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\HttpRequestMessageExtensions.cs" />
+    <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductOrderController.cs" />
+    <Compile Include="Controllers\RetailerController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\UploadFileController.cs" />
+    <Compile Include="Controllers\UserAuthController.cs" />
+    <Compile Include="Controllers\WXController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LogMng\Log4netHandle.ashx.cs">
+      <DependentUpon>Log4netHandle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LogMng\log4net_init.aspx.cs">
+      <DependentUpon>log4net_init.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogMng\log4net_init.aspx.designer.cs">
+      <DependentUpon>log4net_init.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeChat\wx_pay_notify.aspx.cs">
+      <DependentUpon>wx_pay_notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeChat\wx_pay_notify.aspx.designer.cs">
+      <DependentUpon>wx_pay_notify.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="log4net.config" />
+    <Content Include="LogMng\Log4netHandle.ashx" />
+    <None Include="Properties\PublishProfiles\1.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\0.Common\cc.basedal\cc.basedal.csproj">
+      <Project>{c61284af-4c00-4523-8ceb-e9788dbc1c5f}</Project>
+      <Name>cc.basedal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\0.Common\cc.basemodel\cc.basemodel.csproj">
+      <Project>{14f6c36d-d031-4dff-a340-dca5274b1c19}</Project>
+      <Name>cc.basemodel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\0.Common\cc.common\cc.common.csproj">
+      <Project>{24f75602-bc32-43f9-8535-1bee9f12c7f0}</Project>
+      <Name>cc.common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\0.Common\cc.log\cc.log.csproj">
+      <Project>{dbb50849-6a7d-4bd2-b5e1-4f4a42c4935c}</Project>
+      <Name>cc.log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\0.Common\cc.utility\cc.utility.csproj">
+      <Project>{ea05b864-4a01-4c63-9849-287643b9f7db}</Project>
+      <Name>cc.utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\3.BusinessCenter\cc.iservices\cc.iservices.csproj">
+      <Project>{3664cb7e-b982-471b-b92a-b640647917cf}</Project>
+      <Name>cc.iservices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\3.BusinessCenter\cc.services\cc.services.csproj">
+      <Project>{54abf250-8012-4653-8b54-7bb4145bb86c}</Project>
+      <Name>cc.services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\4.BusinessUnit\cc.unit\cc.unit.csproj">
+      <Project>{67a43c45-ca3e-4b02-a9b6-16a78cab5ae7}</Project>
+      <Name>cc.unit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\5.DAL\cc.dal\cc.dal.csproj">
+      <Project>{c3c37992-33fb-4042-8395-c2085c9e159f}</Project>
+      <Name>cc.dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\6.Model\cc.model\cc.model.csproj">
+      <Project>{45bf0c17-344d-4e88-b15b-605b1aaa98f6}</Project>
+      <Name>cc.model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>40103</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:809</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)..\..\BuildAssemblyVersion.bat</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

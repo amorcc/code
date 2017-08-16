@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45BF0C17-344D-4E88-B15B-605B1AAA98F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cc.model</RootNamespace>
+    <AssemblyName>cc.model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoVersion.cs">
+      <Link>AssemblyInfoVersion.cs</Link>
+    </Compile>
+    <Compile Include="AddressInfo.cs" />
+    <Compile Include="AreaInfo.cs" />
+    <Compile Include="CartInfo.cs" />
+    <Compile Include="EnumStatus\PayMentType.cs" />
+    <Compile Include="MenuInfo.cs" />
+    <Compile Include="ProductCollectInfo.cs" />
+    <Compile Include="ProductStateFlowInfo.cs" />
+    <Compile Include="SysExpressInfo.cs" />
+    <Compile Include="VMyRetailerInfo.cs" />
+    <Compile Include="VMySupplierInfo.cs" />
+    <Compile Include="VProductOrderDetailInfo.cs" />
+    <Compile Include="VProductOrderInfo.cs" />
+    <Compile Include="VStoreOutInfo.cs" />
+    <Compile Include="VStoreOutDetailInfo.cs" />
+    <Compile Include="VSupplierPayTypeInfo.cs" />
+    <Compile Include="UserCanBuyInfo.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="VCompanyInfo.cs" />
+    <Compile Include="VProductInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\0.Common\cc.basemodel\cc.basemodel.csproj">
+      <Project>{14f6c36d-d031-4dff-a340-dca5274b1c19}</Project>
+      <Name>cc.basemodel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
