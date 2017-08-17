@@ -79,7 +79,7 @@
         <div v-if="ShowMore" v-on:click="nextPage_Click()" class="show-more m10 bg-white border text-center">
             点击查看更多
         </div>
-        <buyer-footer></buyer-footer>
+        <buyer-footer :refresh.sync="refresh"></buyer-footer>
     </div>
 </template>
 <script>
@@ -93,6 +93,7 @@ export default {
     },
     data: function () {
         return {
+            refresh: false,
             ShowMore: true,
             PageIndex: 1,
             PageSize: 15,
@@ -107,7 +108,7 @@ export default {
     methods: {
         initPage: function () {
             var me = this;
-            this.fetchData({
+            me.fetchData({
                 cmd: '/api/userAuth/IsLogin',
                 para: {},
                 callback: function (data) {
@@ -120,7 +121,7 @@ export default {
 
                         // debugger;
 
-                        this.fetchData({
+                        me.fetchData({
                             cmd: '/api/product/GetRetailerCanBuyProductList',
                             para: iPara,
                             callback: function (data) {
@@ -137,7 +138,7 @@ export default {
                             }
                         });
                     }
-                    else{
+                    else {
                         me.$router.push({ path: '/login' });
                     }
                 }
@@ -159,6 +160,7 @@ export default {
                 para: iPara,
                 callback: function (data) {
                     me.$emit('initPage');
+                    me.refresh = true;
                 }
             });
 

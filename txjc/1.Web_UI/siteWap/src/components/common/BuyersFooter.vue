@@ -36,27 +36,41 @@
 <script>
 export default {
     name: 'BuyerFooter',
-    data : function(){
+    data: function () {
         return {
-            CartNum : 0,
+            CartNum: 0,
         }
     },
-    mounted: function() {
+    props: {
+        refresh: {
+            type: Boolean,
+            twoWay: true,
+            default: false
+        }
+    },
+    mounted: function () {
         this.initPage();
     },
-    methods : {
-        initPage : function(){
+    methods: {
+        initPage: function () {
             var me = this;
             var iPara = {};
 
             this.fetchData({
                 cmd: '/api/Cart/GetCartNum',
                 para: iPara,
-                callback: function(data) {
+                callback: function (data) {
                     me.CartNum = data;
                 }
             });
         },
     },
+    watch: {
+        refresh(newVal, oldVal) {
+            if (newVal) {
+                this.initPage();
+            }
+        }
+    }
 }
 </script>

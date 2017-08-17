@@ -6,14 +6,24 @@
         <div class="login-pic">
             <img src="/static/images/login.jpg">
         </div>
-        <div class="bg-white">
-            <div class="username-pwd">
-                <img src="/static/images/username.png">
-                <input v-model="username" type="text" placeholder="请输入您的用户名">
+        <div class="bg-white pl40 pr40 pt10 pb10">
+            <div class="login-row lh40 bb1">
+                <div class="left w40">
+                    <img src="/static/images/username.png">
+                </div>
+                <div class="ml40" style="margin-left:40px;">
+                    <input v-model="username" class="w-fill b0 pl10" type="text" placeholder="请输入您的用户名">
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="username-pwd" style="border:none;">
-                <img src="/static/images/pwd.png">
-                <input v-model="password" type="password" placeholder="请输入您的用户名">
+            <div class="login-row lh40 pt10 bb1">
+                <div class="left w40">
+                    <img src="/static/images/pwd.png">
+                </div>
+                <div class="ml40" style="margin-left:40px;">
+                    <input v-model="password" class="w-fill b0 pl10" type="password" placeholder="请输入您的用户名">
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
         <div class="login-bottom">
@@ -88,8 +98,7 @@ export default {
                         me.login(para);
                     },
                 }).showModal();
-            }
-            else {
+            } else {
                 var para = {};
                 para.username = me.username;
                 para.password = me.password;
@@ -108,19 +117,29 @@ export default {
 
                     switch (me.type) {
                         case '2':
-                            me.$router.push({ path: '/sol/2' });
+                            me.$router.push({
+                                path: '/sol/2'
+                            });
                             break;
                         case '3':
-                            me.$router.push({ path: '/pm' });
+                            me.$router.push({
+                                path: '/pm'
+                            });
                             break;
                         case '4':
-                            me.$router.push({ path: '/amountprice' });
+                            me.$router.push({
+                                path: '/amountprice'
+                            });
                             break;
                         case '5':
-                            me.$router.push({ path: '/company' });
+                            me.$router.push({
+                                path: '/company'
+                            });
                             break;
                         default:
-                            me.$router.push({ path: '/home' });
+                            me.$router.push({
+                                path: '/home'
+                            });
                             break;
                     }
 
@@ -133,12 +152,14 @@ export default {
             para.username = '13203856178';
             para.password = me.password;
 
-            this.fetchData({
+            me.fetchData({
                 cmd: '/api/userauth/login',
                 para: para,
                 callback: function (data) {
                     localStorage.setItem("token", data.Token);
-                    me.$router.push({ path: '/home' });
+                    me.$router.push({
+                        path: '/home'
+                    });
                 }
             });
         },

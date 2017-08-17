@@ -52,7 +52,7 @@
             </div>
     
         </div>
-        <buyer-footer></buyer-footer>
+        <buyer-footer :refresh.sync="refresh"></buyer-footer>
     </div>
 </template>
 <script>
@@ -67,6 +67,7 @@ export default {
     },
     data: function () {
         return {
+            refresh: false,
             SearchClicked: false,
             ShowMore: false,
             PageIndex: 1,
@@ -131,6 +132,7 @@ export default {
                 para: iPara,
                 callback: function (data) {
                     me.$emit('initPage');
+                    me.refresh = true;
                 }
             });
 
