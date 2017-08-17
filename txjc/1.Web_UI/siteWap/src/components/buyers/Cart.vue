@@ -10,14 +10,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 supplier-name">
-                                    <input id="selectShop" type="checkbox" v-model="item0.IsSelected" />
+                                    <input id="selectShop" type="checkbox" v-model="item0.IsSelected" v-on:change="onSupplierSeleceClick(item0)" />
                                     <label for="selectShop">{{item0.CompanyName}}</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div v-for="item1 of item0.ProList" class="pro-item container-fluid">
-                        <input type="checkbox" v-model="item1.IsSelected" style="float:left;" />
+                        <input type="checkbox" v-model="item1.IsSelected" v-on:change="proSelectChange(item0,item1)" style="float:left;" />
                         <div class="row" style="margin-left:15px;">
                             <div class="col-xs-3 ">
                                 <img :src="item1.ProImage" style="max-height:68px;max-width: 100%;vertical-align: middle;" />
@@ -84,9 +84,9 @@ export default {
                 para: para,
                 callback: function (data) {
                     data.forEach(function (item) {
-                        item.IsSelected = true;
+                        item.IsSelected = false;
                         item.ProList.forEach(function (pro) {
-                            pro.IsSelected = true;
+                            pro.IsSelected = false;
                         });
                     });
 
@@ -149,6 +149,37 @@ export default {
                 });
             }
 
+        },
+        onSupplierSeleceClick: function (item0) {
+            var me = this;
+
+            item0.ProList.forEach(function (pro) {
+                pro.IsSelected = item0.IsSelected;
+            });
+
+            if (item0.IsSelected == true) {
+                me.table.forEach(function (supplier) {
+                    if (supplier.UserSN_S != item0.UserSN_S) {
+                        supplier.IsSelected = false;
+                        supplier.ProList.forEach(function (pro) {
+                            pro.IsSelected = false;
+                        });
+                    }
+                });
+            }
+        },
+        proSelectChange: function (item0, item1) {
+            var me = this;
+            if (item1.IsSelected == true) {
+                me.table.forEach(function (supplier) {
+                    if (supplier.UserSN_S != item0.UserSN_S) {
+                        supplier.IsSelected = false;
+                        supplier.ProList.forEach(function (pro) {
+                            pro.IsSelected = false;
+                        });
+                    }
+                });
+            }
         },
     },
 }

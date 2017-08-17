@@ -15,8 +15,8 @@
             <input type="radio" v-model="payType" :value="item.PayType" />
             <span>{{item.PayTypeName}}</span>
         </div>
-        <div>
-            <input v-on:click="submit_Click()" type="button" value="确认支付" />
+        <div class="text-center">
+            <input v-on:click="submit_Click()" class="btn btn-success" type="button" value="确认支付" />
         </div>
     </div>
 </template>
