@@ -79,7 +79,7 @@
         <div v-if="ShowMore" v-on:click="nextPage_Click()" class="show-more m10 bg-white border text-center">
             点击查看更多
         </div>
-        <buyer-footer :refresh.sync="refresh"></buyer-footer>
+        <buyer-footer ref="footer"></buyer-footer>
     </div>
 </template>
 <script>
@@ -160,7 +160,7 @@ export default {
                 para: iPara,
                 callback: function (data) {
                     me.$emit('initPage');
-                    me.refresh = true;
+                    me.$refs.footer.initPage();
                 }
             });
 
