@@ -107,26 +107,38 @@ export default {
     methods: {
         initPage: function () {
             var me = this;
-            var iPara = {};
-            iPara.PageIndex = me.PageIndex;
-            iPara.PageSize = me.PageSize;
-            iPara.Key = '';
-
-            // debugger;
-
             this.fetchData({
-                cmd: '/api/product/GetRetailerCanBuyProductList',
-                para: iPara,
+                cmd: '/api/userAuth/IsLogin',
+                para: {},
                 callback: function (data) {
-                    var i = 0;
-                    if (data && data.Data) {
-                        for (var key in data.Data) {
-                            me.table.push(data.Data[key]);
-                        }
 
-                        if (me.PageIndex == data.TotalPages) {
-                            me.ShowMore = false;
-                        }
+                    if (data == 1) {
+                        var iPara = {};
+                        iPara.PageIndex = me.PageIndex;
+                        iPara.PageSize = me.PageSize;
+                        iPara.Key = '';
+
+                        // debugger;
+
+                        this.fetchData({
+                            cmd: '/api/product/GetRetailerCanBuyProductList',
+                            para: iPara,
+                            callback: function (data) {
+                                var i = 0;
+                                if (data && data.Data) {
+                                    for (var key in data.Data) {
+                                        me.table.push(data.Data[key]);
+                                    }
+
+                                    if (me.PageIndex == data.TotalPages) {
+                                        me.ShowMore = false;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    else{
+                        me.$router.push({ path: '/login' });
                     }
                 }
             });

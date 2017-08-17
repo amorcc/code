@@ -14,6 +14,7 @@ namespace cc.common.TokenMng
         static TokenNoChk()
         {
             ACTION_NO_CHECK_LIST.Add("Login");
+            ACTION_NO_CHECK_LIST.Add("IsLogin");
             ACTION_NO_CHECK_LIST.Add("GetCartNum");
             ACTION_NO_CHECK_LIST.Add("GetAreaInfo");
             ACTION_NO_CHECK_LIST.Add("Upload");

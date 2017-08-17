@@ -15,6 +15,39 @@ namespace cc.webapi.Controllers
     public class UserAuthController : ApiController
     {
         [HttpPost]
+        public HttpResponseMessage IsLogin([FromBody]JObject jsonPara)
+        {
+            try
+            {
+                #region 解析json
+                string token = jsonPara.GetValueExt<string>("token");
+                #endregion
+
+                ActionResult<int> result = new ActionResult<int>();
+                result.ResponseID = 0;
+
+
+                UserInfo loginUser = cc.common.TokenMng.TokenManage.GetUser(token);
+
+                if (loginUser == null || loginUser.IsTimeOut() == true)
+                {
+                    result.Data = 0;
+                }
+                else
+                {
+                    result.Data = 1;
+                }
+
+                return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(result), System.Text.Encoding.UTF8, "application/json") };
+            }
+            catch (Exception ex)
+            {
+                cc.log.Log.Error(typeof(UserAuthController), ex);
+                return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(cc.common.Utility.MyResponse.ShowError<cc.common.core.MyEntity>(ex.ToString())), System.Text.Encoding.UTF8, "application/json") };
+            }
+        }
+
+        [HttpPost]
         public HttpResponseMessage Login([FromBody]JObject jsonPara)
         {
             try
