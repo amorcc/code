@@ -9,9 +9,9 @@
                     <div class="pro-item container-fluid">
                         <div class="row">
                             <div class="col-xs-3">
-                                <img src="http://www.tianxiajiancai.com.cn/data/upload/shop/store/goods/58/58_05427412759844571_240.png" />
+                                <img :src="item.ProImage" style="max-height:68px;max-width:100%;" />
                             </div>
-                            <div class="col-xs-9 pro-name">
+                            <div class="col-xs-9 pro-name text-left">
                                 <div>
                                     {{item.ProName}}
                                 </div>

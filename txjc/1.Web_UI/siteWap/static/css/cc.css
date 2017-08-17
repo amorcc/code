@@ -154,6 +154,10 @@
     border: none;
 }
 
+.b1 {
+    border: 1px solid #cccccc;
+}
+
 .bt1 {
     border-top: 1px solid #cccccc;
 }
@@ -180,6 +184,10 @@
 
 .lh30 {
     line-height: 30px;
+}
+
+.lh60 {
+    line-height: 60;
 }
 
 .lh70 {
@@ -216,6 +224,14 @@
 
 .text-right {
     text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .right {

@@ -185,7 +185,7 @@ namespace cc.dal
                             {"UserSN_R", item.UserSN_R},
                             {"UserSN_S", item.UserSN_S},
                             {"ProName", item.ProName},
-                            {"ProImage", item.ProImage},
+                            {"ProImage", cc.utility.Common.App("ApiSiteUrl") + item.ProImage},
                             {"Amount", item.Amount},
                         });
                     }

@@ -93,7 +93,6 @@ export default {
     },
     data: function () {
         return {
-            refresh: false,
             ShowMore: true,
             PageIndex: 1,
             PageSize: 15,

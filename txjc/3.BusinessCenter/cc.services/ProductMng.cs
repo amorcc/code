@@ -170,7 +170,7 @@ namespace cc.services
                         {"ProId", item.Id},
                         {"Amount", item.Amount},
                         {"Status", item.Status},
-                        {"ProImage", item.Image},
+                        {"ProImage",cc.utility.Common.App("ApiSiteUrl")+ item.Image},
                         {"ProPrice", item.Price.ToString("0.00")},
                     });
                 }

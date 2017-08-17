@@ -20,10 +20,9 @@
                         <input type="checkbox" v-model="item1.IsSelected" style="float:left;" />
                         <div class="row" style="margin-left:15px;">
                             <div class="col-xs-3 ">
-    
-                                <img src="http://www.tianxiajiancai.com.cn/data/upload/shop/store/goods/58/58_05427412759844571_240.png" />
+                                <img :src="item1.ProImage" style="max-height:68px;max-width: 100%;vertical-align: middle;" />
                             </div>
-                            <div class="col-xs-9 p0">
+                            <div class="col-xs-9 p0 text-left">
                                 <div class="cart-name">
                                     {{item1.ProName}}
                                 </div>
@@ -116,7 +115,7 @@ export default {
         onBuy_Click: function () {
             this.$router.push({ path: '/home' });
         },
-        addCartCount:function(item){
+        addCartCount: function (item) {
             var me = this;
             item.ProCount++;
 
@@ -128,13 +127,13 @@ export default {
                 cmd: '/api/Cart/CartModifyCount',
                 para: para,
                 callback: function (data) {
-                    
+
                 }
             });
         },
-        minusCartCount:function(item){
+        minusCartCount: function (item) {
             var me = this;
-            if(item.ProCount >1){
+            if (item.ProCount > 1) {
                 item.ProCount--;
 
                 var para = {};
@@ -145,7 +144,7 @@ export default {
                     cmd: '/api/Cart/CartModifyCount',
                     para: para,
                     callback: function (data) {
-                        
+
                     }
                 });
             }
