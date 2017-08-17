@@ -17,6 +17,10 @@
     border-radius: 0px;
 }
 
+.clear {
+    clear: both;
+}
+
 .input-text-big {
     height: 40px;
     line-height: 40px;
@@ -38,12 +42,20 @@
     margin-left: 20px;
 }
 
+.ml40 {
+    margin-left: 40p;
+}
+
 .mr10 {
     margin-right: 10px;
 }
 
 .mr20 {
     margin-right: 20px;
+}
+
+.mr40 {
+    margin-right: 40px;
 }
 
 .mr5 {
@@ -110,6 +122,10 @@
     margin: 10px;
 }
 
+.pb2 {
+    padding-bottom: 2px;
+}
+
 .pt10 {
     padding-top: 10px;
 }
@@ -138,6 +154,14 @@
     font-size: 16px;
 }
 
+.b0 {
+    border: none;
+}
+
+.b1 {
+    border: 1px solid #cccccc;
+}
+
 .bt1 {
     border-top: 1px solid #cccccc;
 }
@@ -150,12 +174,28 @@
     border-bottom: 1px dashed #cccccc;
 }
 
+.w40 {
+    width: 40px;
+}
+
+.w-fill {
+    width: 100%;
+}
+
 .lh20 {
     line-height: 20px;
 }
 
 .lh30 {
     line-height: 30px;
+}
+
+.lh60 {
+    line-height: 60;
+}
+
+.lh70 {
+    line-height: 70px;
 }
 
 .pl10 {
@@ -166,12 +206,20 @@
     padding-left: 20px;
 }
 
+.pl40 {
+    padding-left: 40px;
+}
+
 .pr10 {
     padding-right: 10px;
 }
 
 .pr20 {
     padding-right: 20px;
+}
+
+.pr40 {
+    padding-right: 40px;
 }
 
 .lh40 {
@@ -182,8 +230,20 @@
     text-align: right;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .right {
     float: right;
+}
+
+.left {
+    float: left;
 }
 
 .btn-fill-big {
@@ -263,6 +323,10 @@
 
 .pl20 {
     padding-left: 20px !important;
+}
+
+.pl30 {
+    padding-left: 30px;
 }
 
 .pr20 {

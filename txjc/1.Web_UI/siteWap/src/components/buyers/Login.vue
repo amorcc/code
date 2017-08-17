@@ -7,7 +7,7 @@
             <img src="/static/images/login.jpg">
         </div>
         <div class="bg-white pl40 pr40 pt10 pb10">
-            <div class="login-row lh40 bb1">
+            <div class="login-row lh40 bb1 pb2">
                 <div class="left w40">
                     <img src="/static/images/username.png">
                 </div>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="login-row lh40 pt10 bb1">
+            <div class="login-row lh40 pt10 bb1 pb2">
                 <div class="left w40">
                     <img src="/static/images/pwd.png">
                 </div>
@@ -150,7 +150,7 @@ export default {
             var me = this;
             var para = {};
             para.username = '13203856178';
-            para.password = me.password;
+            para.password = '111111';
 
             me.fetchData({
                 cmd: '/api/userauth/login',

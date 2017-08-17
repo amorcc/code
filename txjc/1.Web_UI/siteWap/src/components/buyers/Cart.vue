@@ -22,7 +22,7 @@
                             <div class="col-xs-3 ">
                                 <img :src="item1.ProImage" style="max-height:68px;max-width: 100%;vertical-align: middle;" />
                             </div>
-                            <div class="col-xs-9 p0 text-left">
+                            <div class="col-xs-8 p0 text-left">
                                 <div class="cart-name">
                                     {{item1.ProName}}
                                 </div>
@@ -110,10 +110,14 @@ export default {
             localStorage.setItem("PreviewProInfo", proInfo);
 
             var rn = this.newGuid(true);
-            me.$router.push({ path: '/preview/' + rn + '/1' });
+            me.$router.push({
+                path: '/preview/' + rn + '/1'
+            });
         },
         onBuy_Click: function () {
-            this.$router.push({ path: '/home' });
+            this.$router.push({
+                path: '/home'
+            });
         },
         addCartCount: function (item) {
             var me = this;
