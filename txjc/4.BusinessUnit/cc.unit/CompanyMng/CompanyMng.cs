@@ -15,6 +15,12 @@ namespace cc.unit.CompanyMng
             return companyDal.GetCompanyInfo(iLoginUser.UserSN);
         }
 
+        public VCompanyInfo GetCompanyInfo(string iUserSN_S)
+        {
+            cc.dal.Company companyDal = new dal.Company();
+            return companyDal.GetCompanyInfo(iUserSN_S);
+        }
+
         /// <summary>
         /// 生成卖家的邀请二维码
         /// </summary>

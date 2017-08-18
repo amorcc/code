@@ -81,5 +81,14 @@ namespace cc.services
                 return cc.common.Utility.MyResponse.ShowError<int>(errorMsg);
             }
         }
+
+
+        common.Utility.ActionResult<model.VCompanyInfo> ICompanyMng.GetCompanyInfo(string iUserSN_S)
+        {
+            cc.unit.CompanyMng.CompanyMng companyBU = new unit.CompanyMng.CompanyMng();
+            var result = companyBU.GetCompanyInfo(iUserSN_S);
+
+            return cc.common.Utility.MyResponse.ToYou<model.VCompanyInfo>(result);
+        }
     }
 }

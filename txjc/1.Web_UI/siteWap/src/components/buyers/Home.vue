@@ -59,8 +59,10 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-10 m0 p0 div-ellipsis">
-                                    <span class="shop-icon">店</span>
-                                    {{pro.Supplier}}
+                                    <a v-on:click="btnShop_Click(pro)" href="javascript:;">
+                                        <span class="shop-icon">店</span>
+                                        {{pro.Supplier}}
+                                    </a>
                                 </div>
                                 <div class="col-xs-2 c-red" v-on:click="btnAddToCart_Click(pro)">
                                     <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
@@ -166,6 +168,10 @@ export default {
         },
         btnShowProduct_Click: function (item) {
             this.$router.push({ path: '/p/' + item.ProId });
+        },
+        btnShop_Click: function (pro) {
+            this.$router.push({ path: '/shop/' + pro.UserSN_S })
+            // location.href = "/#/shop/" + pro.UserSN_S;
         },
         test: function () {
             alert('sss');

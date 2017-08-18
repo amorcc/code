@@ -1110,3 +1110,29 @@ i.member {
     min-width: 100px;
     min-height: 100px;
 }
+
+.shop-info-area {
+    height: 80px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 10px;
+}
+
+.shop-info-img {
+    float: left;
+    width: 80px;
+}
+
+.shop-info-area .shop-info-img img {
+    width: 80px;
+    height: 80px;
+}
+
+.shop-info-other {
+    margin-left: 80px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+}

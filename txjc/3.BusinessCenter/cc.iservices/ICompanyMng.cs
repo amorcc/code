@@ -12,6 +12,7 @@ namespace cc.iservices
     public interface ICompanyMng
     {
         ActionResult<VCompanyInfo> GetCompanyInfo(common.UserInfo iLoginUser);
+        ActionResult<VCompanyInfo> GetCompanyInfo(string iUserSN_S);
 
         ActionResult<int> CreateInviteQRCode(common.UserInfo iLoginUser);
 

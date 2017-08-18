@@ -158,8 +158,8 @@ export default {
             // if (me.serverFiles.length == 0) {
             //     me.showTips('请添加公司LOGO', 'error');
             // }
-            console.log(me.serverFiles);
-            if (me.serverFiles.length > 0) {
+            console.log(me.serverFiles)
+            if (me.serverFiles.length == 0) {
                 me.dataIn.LogoImgUrl = me.serverFiles[0];
             }
 

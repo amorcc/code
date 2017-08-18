@@ -16,6 +16,7 @@ import NoCode from '@/components/NoCode'
 import AddAddress from '@/components/buyers/AddAddress'
 import Search from '@/components/buyers/Search'
 import Product from '@/components/buyers/Product'
+import Shop from '@/components/buyers/Shop'
 import SellerOrderList from '@/components/seller/OrderList'
 import StoreOut from '@/components/seller/StoreOut'
 import DeliverGoods from '@/components/seller/DeliverGoods'
@@ -119,6 +120,12 @@ export default new Router({
         },
         //------------------------------------
         //买家
+        {
+            //店铺页
+            path: '/shop/:usersn',
+            name: 'Shop',
+            component: Shop
+        },
         {
             //我的收藏
             path: '/mypc',
