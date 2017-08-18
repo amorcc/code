@@ -21,6 +21,7 @@ namespace cc.dal
             this._sqlCon = cc.common.Sys.SystemConnections.B2bConn;
             this._tableName = "v_Company";
             this._sortField = "Id";
+            this._primaryKey = "Id";
             this._isDesc = false;
         }
 
@@ -40,6 +41,9 @@ namespace cc.dal
             obj.QRCode = cc.utility.Common.App("ApiSiteUrl") + Convert.ToString(dr["QRCode"] == DBNull.Value ? "" : dr["QRCode"]);
             obj.IsOpenSupplier = DataConvert.ToInt32(dr["IsOpenSupplier"]);
             obj.Openid = DataConvert.ToString(dr["Openid"]);
+            obj.ShopName = DataConvert.ToString(dr["ShopName"]);
+            obj.LogoImgUrl = DataConvert.ToString(dr["LogoImgUrl"]);
+            obj.WechatNumber = DataConvert.ToString(dr["WechatNumber"]);
 
             return obj;
         }
@@ -205,6 +209,43 @@ namespace cc.dal
                     {
                         new SqlParameter("@userSN_S", iUserSN_S),
                         new SqlParameter("@userSN_R", iLoginUser.UserSN),
+                        new SqlParameter("@sysUserID", iLoginUser.UserId), //权限控制 及参数列表
+                        new SqlParameter(){ParameterName = "@msg",SqlDbType = SqlDbType.VarChar,Size = 200,Direction = ParameterDirection.Output}
+                    };
+                SqlHelper.ExecuteNonQuery(this._sqlCon, CommandType.StoredProcedure, sp, paras);
+                var msg = paras[paras.Length - 1].Value;
+                if (msg != null && !string.IsNullOrEmpty(msg.ToString()))
+                {
+                    iErrorMsg = msg.ToString();
+                    return false;
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                iErrorMsg = ex.ToString();
+                return false;
+            }
+        }
+
+        public bool UpdateCompanyInfo(common.UserInfo iLoginUser, int iId, string iCompanyName, int iAreaCode, string iCompanyPhone, string iCompanyAddress, string iBusinessScope, string iShopName, string iWechatNumber, string iLogoImgUrl, out string iErrorMsg)
+        {
+            iErrorMsg = string.Empty;
+            try
+            {
+                var sp = "[proc_Company_Update]";
+                var paras = new[]
+                    {
+                        new SqlParameter("@id", iId),
+                        new SqlParameter("@companyName", iCompanyName),
+                        new SqlParameter("@areaCode", iAreaCode),
+                        new SqlParameter("@companyPhone", iCompanyPhone),
+                        new SqlParameter("@companyAddress", iCompanyAddress),
+                        new SqlParameter("@businessScope", iBusinessScope),
+                        new SqlParameter("@shopName", iShopName),
+                        new SqlParameter("@wechatNumber", iWechatNumber),
+                        new SqlParameter("@logoImgUrl", iLogoImgUrl),
                         new SqlParameter("@sysUserID", iLoginUser.UserId), //权限控制 及参数列表
                         new SqlParameter(){ParameterName = "@msg",SqlDbType = SqlDbType.VarChar,Size = 200,Direction = ParameterDirection.Output}
                     };

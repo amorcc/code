@@ -22,5 +22,9 @@ namespace cc.model
         public int IsOpenSupplier { get; set; }
 
         public string Openid { get; set; }
+
+        public string ShopName { get; set; }
+        public string WechatNumber { get; set; }
+        public string LogoImgUrl { get; set; }
     }
 }

@@ -105,6 +105,43 @@ namespace cc.webapi.Controllers
             }
         }
 
+        [HttpPost]
+        public HttpResponseMessage UpdateCompanyInfo([FromBody]JObject jsonPara)
+        {
+            try
+            {
+                #region 解析json
+                int id = jsonPara.GetValueExt<int>("Id");
+                int areaCode = jsonPara.GetValueExt<int>("AreaCode");
+                string companyName = jsonPara.GetValueExt<string>("CompanyName");
+                string iCompanyPhone = jsonPara.GetValueExt<string>("CompanyPhone");
+                string iCompanyAddress = jsonPara.GetValueExt<string>("CompanyAddress");
+                string iBusinessScope = jsonPara.GetValueExt<string>("BusinessScope");
+                string iShopName = jsonPara.GetValueExt<string>("ShopName");
+                string iWechatNumber = jsonPara.GetValueExt<string>("WechatNumber");
+                string iLogoImgUrl = jsonPara.GetValueExt<string>("LogoImgUrl");
+                string token = jsonPara.GetValueExt<string>("token", "");
+                #endregion
 
+                UserInfo loginUser = cc.common.TokenMng.TokenManage.GetUser(token);
+
+                if (loginUser == null || loginUser.IsTimeOut() == true)
+                {
+                    return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(cc.common.Utility.MyResponse.MustLogin<MyEntity>()), System.Text.Encoding.UTF8, "application/json") };
+                }
+
+                jsonPara.Remove("token");
+
+                cc.iservices.ICompanyMng companyBC = new cc.services.CompanyMng();
+                var result = companyBC.UpdateCompanyInfo(loginUser, id, companyName, areaCode, iCompanyPhone, iCompanyAddress, iBusinessScope, iShopName, iWechatNumber, iLogoImgUrl);
+
+                return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(result), System.Text.Encoding.UTF8, "application/json") };
+            }
+            catch (Exception ex)
+            {
+                cc.log.Log.Error(typeof(UserAuthController), ex);
+                return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(cc.common.Utility.MyResponse.ShowError<cc.common.core.MyEntity>(ex.ToString())), System.Text.Encoding.UTF8, "application/json") };
+            }
+        }
     }
 }

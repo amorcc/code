@@ -16,5 +16,7 @@ namespace cc.iservices
         ActionResult<int> CreateInviteQRCode(common.UserInfo iLoginUser);
 
         ActionResult<JObject> JoinMe(common.UserInfo iLoginUser, string iUserSN_S);
+
+        ActionResult<int> UpdateCompanyInfo(common.UserInfo iLoginUser, int iId, string iCompanyName, int iAreaCode, string iCompanyPhone, string iCompanyAddress, string iBusinessScope, string iShopName, string iWechatNumber, string iLogoImgUrl);
     }
 }

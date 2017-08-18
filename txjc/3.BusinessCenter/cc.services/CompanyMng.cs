@@ -59,5 +59,27 @@ namespace cc.services
                 return cc.common.Utility.MyResponse.ShowError<JObject>(errorMsg);
             }
         }
+
+
+
+
+
+        common.Utility.ActionResult<int> ICompanyMng.UpdateCompanyInfo(common.UserInfo iLoginUser, int iId, string iCompanyName, int iAreaCode, string iCompanyPhone, string iCompanyAddress, string iBusinessScope, string iShopName, string iWechatNumber, string iLogoImgUrl)
+        {
+            string errorMsg = string.Empty;
+
+            cc.unit.CompanyMng.CompanyMng companyBC = new unit.CompanyMng.CompanyMng();
+            var rt = companyBC.UpdateCompanyInfo(iLoginUser, iId, iCompanyName, iAreaCode, iCompanyPhone, iCompanyAddress, iBusinessScope, iShopName, iWechatNumber, iLogoImgUrl, out errorMsg) ? 1 : 0;
+
+            if (string.IsNullOrEmpty(errorMsg))
+            {
+
+                return cc.common.Utility.MyResponse.ToYou<int>(rt, "操作成功");
+            }
+            else
+            {
+                return cc.common.Utility.MyResponse.ShowError<int>(errorMsg);
+            }
+        }
     }
 }

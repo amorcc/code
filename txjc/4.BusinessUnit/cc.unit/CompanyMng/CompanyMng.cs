@@ -32,5 +32,13 @@ namespace cc.unit.CompanyMng
             cc.dal.Company companyDal = new dal.Company();
             return companyDal.JoinMe(iLoginUser, iUserSN_S, out iErrorMsg);
         }
+
+
+        public bool UpdateCompanyInfo(common.UserInfo iLoginUser, int iId, string iCompanyName, int iAreaCode, string iCompanyPhone, string iCompanyAddress, string iBusinessScope, string iShopName, string iWechatNumber, string iLogoImgUrl, out string iErrorMsg)
+        {
+
+            cc.dal.Company companyDal = new dal.Company();
+            return companyDal.UpdateCompanyInfo(iLoginUser, iId, iCompanyName, iAreaCode, iCompanyPhone, iCompanyAddress, iBusinessScope, iShopName, iWechatNumber, iLogoImgUrl, out iErrorMsg);
+        }
     }
 }
