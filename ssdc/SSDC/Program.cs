@@ -28,7 +28,7 @@ namespace SSDC
                 dbHint.Show();
                 ExecuteCom("net start mysql", 0);
                 MainForm mainForm = new MainForm();
-                System.Threading.Thread.Sleep(3000);
+                System.Threading.Thread.Sleep(1200);
                 dbHint.Close();
                 #endregion
                 if (SSDC.Common.Register.CheckRegister() == false)

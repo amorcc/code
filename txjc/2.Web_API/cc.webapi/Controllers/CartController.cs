@@ -149,5 +149,36 @@ namespace cc.webapi.Controllers
                 return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(cc.common.Utility.MyResponse.ShowError<cc.common.core.MyEntity>(ex.ToString())), System.Text.Encoding.UTF8, "application/json") };
             }
         }
+
+        [HttpPost]
+        public HttpResponseMessage CartDelete([FromBody]JObject jsonPara)
+        {
+            try
+            {
+                #region 解析json
+                string ids = jsonPara.GetValueExt<string>("ids", "");
+
+                string token = jsonPara.GetValueExt<string>("token");
+                #endregion
+
+                UserInfo loginUser = cc.common.TokenMng.TokenManage.GetUser(token);
+
+                if (loginUser == null || loginUser.IsTimeOut() == true)
+                {
+                    return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(cc.common.Utility.MyResponse.MustLogin<MyEntity>()), System.Text.Encoding.UTF8, "application/json") };
+                }
+
+                cc.iservices.ICartMng cartBC = new cc.services.CartMng();
+
+                var result = cartBC.CartDelete(loginUser, ids);
+
+                return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(result), System.Text.Encoding.UTF8, "application/json") };
+            }
+            catch (Exception ex)
+            {
+                cc.log.Log.Error(typeof(UserAuthController), ex);
+                return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(cc.common.Utility.MyResponse.ShowError<cc.common.core.MyEntity>(ex.ToString())), System.Text.Encoding.UTF8, "application/json") };
+            }
+        }
     }
 }

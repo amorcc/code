@@ -202,7 +202,15 @@ namespace SSDC
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
+            if (this.WindowState != FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -221,7 +229,7 @@ namespace SSDC
 
         private void button12_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void ccButton1_Load(object sender, EventArgs e)

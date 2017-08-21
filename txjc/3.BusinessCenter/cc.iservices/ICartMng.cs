@@ -16,5 +16,7 @@ namespace cc.iservices
         ActionResult<JArray> GetCartInfo(cc.common.UserInfo iLoginUser);
 
         ActionResult<int> CartModifyCount(UserInfo iLoginUser, int iProId, int iModifyCount);
+
+        ActionResult<int> CartDelete(cc.common.UserInfo iLoginUser, string iIds);
     }
 }

@@ -46,5 +46,23 @@ namespace cc.services
                 return cc.common.Utility.MyResponse.ShowError<int>(errorMsg);
             }
         }
+
+        common.Utility.ActionResult<int> ICartMng.CartDelete(UserInfo iLoginUser, string iIds)
+        {
+            string errorMsg = string.Empty;
+
+
+            cc.unit.CartMng.CartMng cartBU = new unit.CartMng.CartMng();
+            var result = cartBU.CartDelete(iLoginUser, iIds, out errorMsg);
+
+            if (string.IsNullOrEmpty(errorMsg))
+            {
+                return cc.common.Utility.MyResponse.ToYou<int>(result ? 1 : 0, "操作成功");
+            }
+            else
+            {
+                return cc.common.Utility.MyResponse.ShowError<int>(errorMsg);
+            }
+        }
     }
 }

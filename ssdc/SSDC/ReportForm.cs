@@ -245,7 +245,7 @@ namespace SSDC
                             tempStr += "\t";
                         }
 
-                        tempStr += "" + dt.Rows[j][k].ToString();
+                        tempStr += "_" + dt.Rows[j][k].ToString();
                     }
                     sw.WriteLine(tempStr);
                 }

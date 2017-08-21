@@ -50,8 +50,7 @@
         </div>
         <div class="cartFooter navbar navbar-default navbar-fixed-bottom">
             <div class="container">
-                <input id="all" type="checkbox" v-model="selectAll" />
-                <label for="all">全选</label>
+                <a v-on:click="cartDelete()" href="javascript:;">删除</a>
                 <input class="btn-add-cart" type="button" value="确认" v-on:click="onOrderPreview_Click()" />
                 <input class="btn-cancel-cart" type="button" value="继续采购" v-on:click="onBuy_Click()" />
             </div>
@@ -113,6 +112,38 @@ export default {
             me.$router.push({
                 path: '/preview/' + rn + '/1'
             });
+        },
+        cartDelete: function () {
+            var me = this;
+
+            dialog({
+                title: '提示',
+                content: '您确定要删除商品吗？',
+                ok: function () {
+                    var ids = '';
+
+                    me.table.forEach(function (item) {
+                        item.ProList.forEach(function (pro) {
+                            if (pro.IsSelected == true) {
+                                ids += ids == '' ? '' : ',';
+                                ids += pro.Id;
+                            }
+                        });
+                    });
+
+                    var para = {};
+                    para.ids = ids;
+
+                    me.fetchData({
+                        cmd: '/api/Cart/CartDelete',
+                        para: para,
+                        callback: function (data) {
+                            me.initPage();
+                        }
+                    });
+                },
+                cancel: function () { },
+            }).showModal();
         },
         onBuy_Click: function () {
             this.$router.push({

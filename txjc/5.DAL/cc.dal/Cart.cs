@@ -143,6 +143,29 @@ namespace cc.dal
             return true;
         }
 
+        public bool CartDelete(cc.common.UserInfo iLoginUser, string iIds, out string iErrorMsg)
+        {
+            iErrorMsg = string.Empty;
+            var paras = new[]
+                    {
+                        new SqlParameter("@ids", iIds),
+                        new SqlParameter("@userSN_R", iLoginUser.UserSN),
+                        new SqlParameter("@sysUserId", iLoginUser.UserId),
+                        new SqlParameter(){ParameterName = "@msg",SqlDbType = SqlDbType.VarChar,Size = 200,Direction = ParameterDirection.Output}
+
+                    };
+
+            SqlHelper.ExecuteNonQuery(this._sqlCon, CommandType.StoredProcedure, "[proc_Cart_Delete]", paras);
+            var msg = paras[paras.Length - 1].Value;//返回非空,执行数据查询异常
+            if (msg != null && !string.IsNullOrEmpty(msg.ToString()))
+            {
+                iErrorMsg = msg.ToString();
+                return false;
+            }
+
+            return true;
+        }
+
         /// <summary>
         /// 获取购物车信息
         /// </summary>

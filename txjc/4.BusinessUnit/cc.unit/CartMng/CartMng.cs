@@ -27,7 +27,7 @@ namespace cc.unit.CartMng
             return cartDal.GetCartInfo(iUserSN_R);
         }
 
-          /// <summary>
+        /// <summary>
         /// 修改购物车商品数量
         /// </summary>
         /// <param name="iLoginUser"></param>
@@ -39,6 +39,13 @@ namespace cc.unit.CartMng
         {
             cc.dal.Cart cartDal = new dal.Cart();
             return cartDal.CartModifyCount(iLoginUser, iProId, iModifyCount, out iErrorMsg);
-        } 
+        }
+
+        public bool CartDelete(cc.common.UserInfo iLoginUser, string iIds, out string iErrorMsg)
+        {
+            cc.dal.Cart cartDal = new dal.Cart();
+            return cartDal.CartDelete(iLoginUser, iIds, out iErrorMsg);
+        }
+
     }
 }
