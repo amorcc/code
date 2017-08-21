@@ -12,7 +12,7 @@ namespace cc.iservices
     public interface IProductMng
     {
         ActionResult<int> AddToCart(int iUserId, string iUserSN_R, int iProId, int iProCount);
-        ActionResult<JObject> GetRetailerCanBuyProductList(UserInfo iLoginUser, string iKey, int iPageIndex, int iPageSize);
+        ActionResult<JObject> GetRetailerCanBuyProductList(UserInfo iLoginUser, string iKey, string iUserSN_S, int iPageIndex, int iPageSize);
         ActionResult<JObject> GetRetailerCanBuyProductList2(UserInfo iLoginUser, int iPageIndex, int iPageSize);
 
         ActionResult<JObject> GetProductInfo(UserInfo iLoginUser, int iProId);

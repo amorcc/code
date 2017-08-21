@@ -56,6 +56,7 @@ namespace cc.webapi.Controllers
                 #region 解析json
                 string token = jsonPara.GetValueExt<string>("token");
                 string key = jsonPara.GetValueExt<string>("key", "");
+                string userSN_S = jsonPara.GetValueExt<string>("UserSN_S", "");
                 int pageIndex = jsonPara.GetValueExt<int>("PageIndex", 1);
                 int pageSize = jsonPara.GetValueExt<int>("PageSize", 15);
                 #endregion
@@ -69,7 +70,7 @@ namespace cc.webapi.Controllers
 
                 cc.iservices.IProductMng productBC = new cc.services.ProductMng();
 
-                var result = productBC.GetRetailerCanBuyProductList(loginUser, key, pageIndex, pageSize);
+                var result = productBC.GetRetailerCanBuyProductList(loginUser, key, userSN_S, pageIndex, pageSize);
 
                 return new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(result), System.Text.Encoding.UTF8, "application/json") };
             }

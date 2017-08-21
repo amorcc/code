@@ -60,7 +60,7 @@ namespace cc.dal
             return base.List(sc.ConditionStr);
         }
 
-        public List<VProductInfo> GetProductList(string iUserSN_R, string iKey, int iPageIndex, int iPageSize, out int iTotalRows, out int iTotalPages, out string iErrorMsg)
+        public List<VProductInfo> GetProductList(string iUserSN_R, string iKey, string iUserSN_S, int iPageIndex, int iPageSize, out int iTotalRows, out int iTotalPages, out string iErrorMsg)
         {
             iErrorMsg = string.Empty;
             iTotalPages = 1;
@@ -70,6 +70,7 @@ namespace cc.dal
                     {
                         new SqlParameter("@key", iKey),
                         new SqlParameter("@userSN_R", iUserSN_R),
+                        new SqlParameter("@userSN_S", iUserSN_S),
                         new SqlParameter("@PageIndex", iPageIndex),
                         new SqlParameter("@PageSize", iPageSize),
                         new SqlParameter(){ParameterName = "@totalPages",SqlDbType = SqlDbType.Int,Size = 4,Direction = ParameterDirection.Output},

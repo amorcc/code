@@ -152,7 +152,7 @@ namespace cc.dal
             VCompanyInfo companyInfo = this.GetCompanyInfo(iLoginUser.UserSN);
 
             string wapSiteUrl = cc.utility.Common.App("WapSiteUrl");
-            string inviteUrl = string.Format("{0}/#/joinme/{1}", wapSiteUrl, iLoginUser.UserSN);
+            string inviteUrl = string.Format("{0}#/joinme/{1}", wapSiteUrl, iLoginUser.UserSN);
             string filePath = string.Format("QRCode/{0}.png", iLoginUser.UserSN);
 
             cc.common.QRCode.QRCode qrcode = new common.QRCode.QRCode();

@@ -1,23 +1,39 @@
 <template>
     <div>
         <div class="mt40">
-            <top-nav title="添加供货商"></top-nav>
+            <top-nav title="邀请分销商"></top-nav>
         </div>
-        <div class="mt10 mt60 alert alert-success ml20 mr20">
+        <!-- <div class="mt10 mt60 alert alert-success ml20 mr20">
             {{hintMsg}}
-        </div>
+        </div> -->
         <div v-if="IsLogin==1" class="bg-white p20 text-center">
             <a href="/#/home">去首页</a>
         </div>
         <div v-if="IsLogin==0">
-            <div class="bg-white">
-                <div class="username-pwd">
-                    <img src="/static/images/username.png">
-                    <input v-model="username" type="text" placeholder="请输入您的用户名">
+            <div class="p10 text-right" style="color:#bbbbbb">
+                建材行业B2B解决方案
+            </div>
+            <div class="login-pic">
+                <img src="/static/images/login.jpg">
+            </div>
+            <div class="bg-white pl40 pr40 pt10 pb10">
+                <div class="login-row lh40 bb1 pb2">
+                    <div class="left w40">
+                        <img src="/static/images/username.png" />
+                    </div>
+                    <div class="ml40" style="margin-left:40px;">
+                        <input v-model="username" class="w-fill b0 pl10" type="text" placeholder="请输入您的用户名">
+                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="username-pwd" style="border:none;">
-                    <img src="/static/images/pwd.png">
-                    <input v-model="password" type="password" placeholder="请输入您的密码">
+                <div class="login-row lh40 pt10 bb1 pb2">
+                    <div class="left w40">
+                        <img src="/static/images/pwd.png" />
+                    </div>
+                    <div class="ml40" style="margin-left:40px;">
+                        <input v-model="password" class="w-fill b0 pl10" type="password" placeholder="请输入您的用户名">
+                    </div>
+                    <div class="clear"></div>
                 </div>
             </div>
             <div class="login-bottom">
@@ -25,7 +41,7 @@
                     <input v-on:click="onLoginClick()" class="login-btn" type="button" value="登录" />
                 </div>
                 <div class="login-reg-area text-center">
-                    <a href="/#/reg">立即注册</a>
+                    <a v-on:click="gotoRegPage()" href="javascript:;">立即注册</a>
                     <span>|</span>
                     <a href="#">找回密码</a>
                     <span>|</span>
@@ -64,6 +80,9 @@ export default {
             me.UserSN_S = me.$route.params.usersn;
             me.joinMe();
         },
+        gotoRegPage: function () {
+            this.$router.push({ path: '/reg/' + this.UserSN_S });
+        },
         joinMe: function () {
             var me = this;
             var para = {};
@@ -75,10 +94,10 @@ export default {
                 callback: function (data) {
                     if (data && data.IsLogin == 0) {
                         me.IsLogin = 0;
-                        me.hintMsg = "尚未登录，登录后将自动加入该供货商";
+                        me.hintMsg = "尚未登录，登录后将自动跳转供货商店铺";
                     }
                     if (data && data.IsLogin == 1 && data.Success == 1) {
-                        me.$router.push({ path: '/mysupplier' });
+                        me.$router.push({ path: '/shop/' + me.UserSN_S });
                     }
                 }
             });

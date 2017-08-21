@@ -17,13 +17,13 @@ namespace cc.unit.ProductMng
             return cartDal.AddToCart(iUserId, iUserSN_R, iProId, iProCount, out iErrorMsg);
         }
 
-        public List<VProductInfo> GetRetailerCanBuyProductList(string iUserSN_R, string iKey, int iPageIndex, int iPageSize, out int iTotalRows, out int iTotalPages, out string iErrorMsg)
+        public List<VProductInfo> GetRetailerCanBuyProductList(string iUserSN_R, string iKey, string iUserSN_S, int iPageIndex, int iPageSize, out int iTotalRows, out int iTotalPages, out string iErrorMsg)
         {
             iTotalPages = 0;
             iTotalRows = 0;
             cc.dal.Product pDal = new dal.Product();
 
-            return pDal.GetProductList(iUserSN_R, iKey, iPageIndex, iPageSize, out iTotalRows, out iTotalPages, out iErrorMsg);
+            return pDal.GetProductList(iUserSN_R, iKey, iUserSN_S, iPageIndex, iPageSize, out iTotalRows, out iTotalPages, out iErrorMsg);
 
         }
 

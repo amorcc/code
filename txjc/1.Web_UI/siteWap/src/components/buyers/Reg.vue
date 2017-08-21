@@ -42,7 +42,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label remove-font-weight">邀请码：</label>
                         <div class="col-sm-10">
-                            <input v-model="dataIn.InviteCode" type="text" class="form-control" id="inputEmail3" placeholder="选填">
+                            <input v-model="dataIn.InviteCode" type="text" class="form-control" id="inputEmail3" placeholder="选填" :readonly="IsInviteReg">
                         </div>
                     </div>
                 </form>
@@ -63,6 +63,8 @@ export default {
     name: 'Reg',
     data: function () {
         return {
+            //是否是邀请注
+            IsInviteReg: false,
             dataIn: {
                 UserName: '13203856178',
                 CompanyName: '111',
@@ -80,8 +82,12 @@ export default {
         initPage: function () {
             this.dataIn.InviteCode = this.$route.params.invitecode;
 
-            if(this.dataIn.InviteCode == 'none'){
+            if (this.dataIn.InviteCode == 'none') {
                 this.dataIn.InviteCode = '';
+                this.IsInviteReg = false;
+            }
+            else {
+                this.IsInviteReg = true;
             }
         },
         onSubmit_Click: function () {
@@ -119,7 +125,12 @@ export default {
                 para: para,
                 callback: function (data) {
                     me.showTips('注册成功');
-                    me.$router.push({ path: '/login/' });
+                    if (me.IsInviteReg) {
+                        me.$router.push({ path: '/joinme/' + me.dataIn.InviteCode });
+                    }
+                    else {
+                        me.$router.push({ path: '/login/' });
+                    }
                 }
             });
 

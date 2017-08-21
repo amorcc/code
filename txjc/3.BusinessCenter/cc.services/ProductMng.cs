@@ -12,14 +12,14 @@ namespace cc.services
     public class ProductMng : IProductMng
     {
 
-        common.Utility.ActionResult<JObject> IProductMng.GetRetailerCanBuyProductList(common.UserInfo iLoginUser, string iKey, int iPageIndex, int iPageSize)
+        common.Utility.ActionResult<JObject> IProductMng.GetRetailerCanBuyProductList(common.UserInfo iLoginUser, string iKey, string iUserSN_S, int iPageIndex, int iPageSize)
         {
             int totalPages = 0;
             int totalRows = 0;
             string errorMsg = string.Empty;
             cc.unit.ProductMng.Product pBu = new unit.ProductMng.Product();
 
-            List<VProductInfo> lst = pBu.GetRetailerCanBuyProductList(iLoginUser.UserSN, iKey, iPageIndex, iPageSize, out totalRows, out totalPages, out errorMsg);
+            List<VProductInfo> lst = pBu.GetRetailerCanBuyProductList(iLoginUser.UserSN, iKey, iUserSN_S, iPageIndex, iPageSize, out totalRows, out totalPages, out errorMsg);
 
             JArray lstJarray = new JArray();
 

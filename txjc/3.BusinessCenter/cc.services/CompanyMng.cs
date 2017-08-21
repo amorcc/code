@@ -52,7 +52,7 @@ namespace cc.services
                     {"IsLogin",1},
                     {"Success",1},
                 };
-                return cc.common.Utility.MyResponse.ToYou<JObject>(result, "操作成功");
+                return cc.common.Utility.MyResponse.ToYou<JObject>(result, "");
             }
             else
             {
