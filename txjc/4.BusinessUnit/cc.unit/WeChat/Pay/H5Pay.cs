@@ -54,7 +54,7 @@ namespace cc.unit.WeChat.Pay
             WxPayData data = new WxPayData();
             data.SetValue("body", "test");
             data.SetValue("attach", this.ordercodes);
-            data.SetValue("out_trade_no", this.rn);
+            data.SetValue("out_trade_no", WxPayApi.GenerateOutTradeNo());
             data.SetValue("total_fee", total_fee);
             data.SetValue("time_start", DateTime.Now.ToString("yyyyMMddHHmmss"));
             data.SetValue("time_expire", DateTime.Now.AddMinutes(10).ToString("yyyyMMddHHmmss"));
