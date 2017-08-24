@@ -126,12 +126,30 @@ namespace cc.services
 
             if (pro != null)
             {
+                JArray images = new JArray();
+
+                if (!string.IsNullOrEmpty(pro.Images))
+                {
+                    string[] imageArray = pro.Images.Split(',');
+
+                    if (imageArray != null && imageArray.Length > 0)
+                    {
+                        foreach (var img in imageArray)
+                        {
+                            if (!string.IsNullOrEmpty(img))
+                            {
+                                images.Add(cc.utility.Common.App("ApiSiteUrl") + img);
+                            }
+                        }
+                    }
+                }
+
                 JObject result = new JObject()
                 {
                     {"ProId",pro.Id},
                     {"ProName",pro.Name},
                     {"ProImage",cc.utility.Common.App("ApiSiteUrl")+pro.Image},
-                    {"ProImages", pro.Images},
+                    {"ProImages", images},
                     {"ProPrice",pro.Price.ToString("0.00")},
                     {"ProAmount",pro.Amount},
                     {"Status",pro.Status},

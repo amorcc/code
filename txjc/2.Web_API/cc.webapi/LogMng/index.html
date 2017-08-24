@@ -1,78 +1,19 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <script src="/LogMng/vue.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="/LogMng/jquery-1.8.1.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/LogMng/vue.js"></script>
     <style type="text/css">
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-            width: 100%;
-        }
-
-        .border-dcdcdc, .tab, .tab > li, input[type="text"], select, .table > thead, .table > thead > tr > th, .table > thead > tr td, .table > tbody {
-            border: 1px solid #dcdcdc;
-        }
-
-            .bg-fcfcfc, .tab > li, input[type="text"], select, .table > thead, .table-striped > tbody > tr:nth-of-type(even) {
-                background-color: #fcfcfc;
-            }
-
-        thead {
-            display: table-header-group;
-            vertical-align: middle;
-            border-color: inherit;
-        }
-
-        .font14, .table > thead > tr > th, .table > thead > tr td, .btn {
-            font-size: 14px;
-        }
-
-        .table > thead > tr > th, .table > thead > tr td {
-            padding: 7px 15px;
-        }
-
-        input[type="text"], select {
-            height: 30px;
-            line-height: 1.42857143;
-            background-image: none;
-        }
-
-        body, textarea, input, button, select, keygen, legend {
-            font-size: 12px;
-            line-height: 24px;
-            font-family: 'Microsoft YaHei',\5b8b\4f53;
-            color: #333;
-            outline: 0;
-        }
-
-            .transition200ms, .tab > li, input[type="text"], select {
-                transition: 200ms;
-            }
-
-        .text-center, .table > thead > tr {
-            text-align: center;
-        }
-
-        #lst tr td {
-            border-right: 1px solid #dcdcdc;
-            padding: 5px;
-            border-bottom: 1px solid #dcdcdc;
-        }
-
-        #lst thead tr td {
-            padding: 0;
-        }
-
-        #lst tr td input,
-        #lst tr td select {
-            margin: 0;
-            width: 100%;
-            border: none;
-        }
-
         .FATAL {
             color: #179c6a;
         }
@@ -81,162 +22,81 @@
             color: red;
         }
 
-        .col1 {
-            width: 70px;
+        .col {
             word-break: break-all;
             word-wrap: break-word;
         }
 
-        .col2 {
-            width: 60px;
-            word-break: break-all;
-            word-wrap: break-word;
+
+        .p10 {
+            padding: 10px;
         }
 
-        .col3 {
-            width: 80px;
-            word-break: break-all;
-            word-wrap: break-word;
+        .p0 {
+            padding: 0px;
         }
 
-        .col4 {
-            width: 60px;
-            word-break: break-all;
-            word-wrap: break-word;
+        .lh35 {
+            line-height: 35px;
         }
 
-        .col5 {
-            width: 90px;
-            word-break: break-all;
-            word-wrap: break-word;
+        .text-right {
+            text-align: right;
         }
 
-        .col61 {
-            word-break: break-all;
-            word-wrap: break-word;
+        .mt10 {
+            margin-top: 10px;
         }
 
-        .col7 {
-            width: 80px;
-            word-break: break-all;
-            word-wrap: break-word;
+        .mt20 {
+            margin-top: 20px;
         }
 
-        .col8 {
-            width: 80px;
-            word-break: break-all;
-            word-wrap: break-word;
+        .bb1 {
+            border-bottom: 1px solid #cccccc;
         }
 
-        .col91 {
-            width: 120px;
-            word-break: break-all;
-            word-wrap: break-word;
-            display: block;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .col10 {
-            /*width: 130px;*/
-            width: 120px;
-            word-break: break-all;
-            word-wrap: break-word;
-            display: block;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .col11 {
-            width: 100px;
-            word-break: break-all;
-            word-wrap: break-word;
-        }
-
-        .copy {
-            color: #999998;
-            cursor: pointer;
+        .list > div:nth-child(even) {
+            background: #f9f9f9;
         }
     </style>
 
 </head>
 <body>
     <section id="app">
-        <div style="padding: 20px;">
-            <div>
-                <span style="font-size: 16px;">切换日志</span>
-                <select id="selectFileList" v-model="dataOut.ReadLog4netTxtLog_GetLogFileInfo">
-                    <option>请选择要加载的日志文件</option>
-                    <option v-for="item in dataIn.files" value="{{item.SitePath}}">{{item.FileName}}</option>
-                </select>
-                <a href="#" style="color: blue; font-size: 16px; margin-left: 20px;" v-on:click="onRefreshBtn_Click">刷新</a>
-                <a href="log4net_init.aspx" target="_Blank" style="color: blue; font-size: 16px; margin-left: 20px; ">强制加载log4net配置</a>
+        <div class="container-fluid">
+            <div class="row p10 lh35 bb1">
+                <div class="col-xs-7 p0">
+                    <select class="form-control" id="selectFileList" v-model="dataOut.ReadLog4netTxtLog_GetLogFileInfo">
+                        <option>请选择日志文件</option>
+                        <option v-for="item in dataIn.files" value="{{item.SitePath}}">{{item.FileName}}</option>
+                    </select>
+                </div>
+                <div class="col-xs-5 p0 text-right">
+                    <a class="btn btn-success" href="#" v-on:click="onRefreshBtn_Click">刷新</a>
+                    <a class="btn btn-success" href="log4net_init.aspx" target="_Blank">log4net</a>
+                </div>
             </div>
-            <div>
-                <span>当前选择：</span><span>{{dataOut.ReadLog4netTxtLog_GetLogFileInfo}}</span>
+            <div class="row p10 lh35 bb1">
+                <div>
+                    <select class="form-control" v-model="myFilter.selectedLoggerType">
+                        <option value="">ALL</option>
+                        <option value="DEBUG">DEBUG</option>
+                        <option value="INFO">INFO</option>
+                        <option value="WARN">WARN</option>
+                        <option value="ERROR">ERROR</option>
+                        <option value="FATAL">FATAL</option>
+                    </select>
+                </div>
+                <div class="mt10">
+                    <input class="form-control" type="text" placeholder="检索路径" v-model="myFilter.classFilter" />
+                </div>
+                <div class="mt10">
+                    <input class="form-control" type="text" placeholder="检索信息" v-model="myFilter.infoFilter" />
+                </div>
             </div>
-        </div>
-        <div style="padding: 20px;">
-            <table border="0" cellpadding="0" cellspacing="0" align="center" class="table table-striped" id="lst">
-                <thead>
-                    <tr>
-                        <th style="width: 70px;">时间</th>
-                        <th style="width: 60px;">类型</th>
-                        <th style="width: 80px;">路径</th>
-                        <th style="width: 60px;">站点</th>
-                        <th style="width: 90px;">业务代码</th>
-                        <th>日志内容</th>
-                        <th style="width: 80px;">用户ID|SN|Role</th>
-                        <th style="width: 80px;">IP地址</th>
-                        <th style="width: 120px;">参数入口</th>
-                        <th style="width: 120px;">参数出口</th>
-                        <th style="width: 100px;">主键</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="padding: 0; margin: 0;">
-                            <select id="col1" style="padding: 0; margin: 0;" v-model="myFilter.selectedLoggerType">
-                                <option value="">ALL</option>
-                                <option value="DEBUG">DEBUG</option>
-                                <option value="INFO">INFO</option>
-                                <option value="WARN">WARN</option>
-                                <option value="ERROR">ERROR</option>
-                                <option value="FATAL">FATAL</option>
-                            </select>
-                        </td>
-                        <td>
-                            <input id="col2" type="text" placeholder="输入可检索" v-model="myFilter.classFilter" />
-                        </td>
-                        <td>
-                            <input id="col3" type="text" placeholder="输入可检索" v-model="myFilter.siteNameFilter" />
-                        </td>
-                        <td>
-                            <input id="col4" type="text" placeholder="输入可检索" v-model="myFilter.businessCodeFilter" />
-                        </td>
-                        <td>
-                            <input id="col5" type="text" placeholder="输入可检索" v-model="myFilter.infoFilter" />
-                        </td>
-                        <td>
-                            <input id="col6" type="text" placeholder="输入可检索" v-model="myFilter.userIdFilter" />
-                        </td>
-                        <td>
-                            <input id="col7" type="text" placeholder="输入可检索" v-model="myFilter.clientIpFilter" />
-                        </td>
-                        <td>
-                            <input id="col8" type="text" placeholder="输入可检索" v-model="myFilter.paraInFilter" />
-                        </td>
-                        <td>
-                            <input id="col9" type="text" placeholder="输入可检索" v-mode="myFilter.paraOutFilter" />
-                        </td>
-                        <td>
-                            <input id="col10" type="text" placeholder="输入可检索" v-model="myFilter.tableCodeFilter" />
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="log in dataIn.logList
+            <div class="mt20 list">
+                <div  v-for="log in dataIn.logList
                                 | filterBy myFilter.selectedLoggerType in 'loggerType'
                                 | filterBy myFilter.classFilter in 'loggerClass'
                                 | filterBy myFilter.siteNameFilter in 'siteName'
@@ -247,21 +107,45 @@
                                 | filterBy myFilter.paraInFilter in 'paraIn'
                                 | filterBy myFilter.paraOutFilter in 'paraOut'
                                 | filterBy myFilter.tableCodeFilter in 'tableCode'
-                                | orderBy 'date' -1" class="{{log.loggerType}}">
-                        <td><div class="col col1">{{log.date}}</div></td>
-                        <td><div class="col col2">{{log.loggerType}}</div></td>
-                        <td><div class="col col3">{{log.loggerClass}}</div></td>
-                        <td><div class="col col4">{{log.siteName}}</div></td>
-                        <td><div class="col col5">{{log.businessCode}}</div></td>
-                        <td><div class="col col61">{{log.info}}</div></td>
-                        <td><div class="col col7">{{log.userId}}</div></td>
-                        <td><div class="col col8">{{log.clientIp}}</div></td>
-                        <td><div class="col col91">{{log.paraIn}}</div><div><span class="copy copy9" title="{{log.paraIn}}">查看<span></span></span></div></td>
-                        <td><div class="col col10">{{log.paraOut}}</div><div><span class="copy copy10" title="{{log.paraOut}}">查看<span></span></span></div></td>
-                        <td><div class="col col11">{{log.tableCode}}</div></td>
-                    </tr>
-                </tbody>
-            </table>
+                                | orderBy 'date' -1">
+                    <div class="mt10 {{log.loggerType}}">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col">
+                                            <div class="col">
+                                                {{log.date}}
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <div class="col">
+                                                {{log.loggerType}}
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="col">
+                                            {{log.loggerClass}}
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="col">
+                                            {{log.info}}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script>
@@ -318,7 +202,7 @@
                 //----------------------------
                 //输出的参数内容
                 dataOut: {
-                    ReadLog4netTxtLog_GetLogFileInfo: '请选择要加载的日志文件',
+                    ReadLog4netTxtLog_GetLogFileInfo: '请选择日志文件',
                 }
             },
             ready: function () {
@@ -348,6 +232,10 @@
                         //成功返回之后调用的函数
                         success: function (data) {
                             me.dataIn.files = data.Data;
+
+                            if (data.Data && data.Data.length > 0) {
+                                me.dataOut.ReadLog4netTxtLog_GetLogFileInfo = data.Data[0].SitePath;
+                            }
                         },
                     });
                 },

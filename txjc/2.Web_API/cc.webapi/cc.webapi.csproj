@@ -80,6 +80,7 @@
     <Content Include="Alipay\alipay_notify_url.aspx" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="LogMng\index2.html" />
     <Content Include="LogMng\jquery-1.8.1.min.js" />
     <Content Include="LogMng\log4net_init.aspx" />
     <Content Include="LogMng\index.html" />

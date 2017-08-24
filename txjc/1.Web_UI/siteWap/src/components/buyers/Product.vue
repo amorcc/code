@@ -18,10 +18,13 @@
                 <span class="red-line ml10 ">&nbsp;</span>
                 商品介绍
             </div>
-            <div class="div-fill mt10 pro-desc" v-html="dataIn.Desc">
+            <div class="bg-white p10 mt10 pro-desc" v-html="dataIn.Desc">
                 {{dataIn.Desc}}
             </div>
-            <div class="mb80">
+            <div class="product-images ">
+                <img v-for="img in dataIn.ProImages" :src="img" />
+            </div>
+            <div class="mb60">
             </div>
             <div class="cartFooter navbar navbar-default navbar-fixed-bottom">
                 <div class="container">

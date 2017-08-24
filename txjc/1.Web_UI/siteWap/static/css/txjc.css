@@ -1168,3 +1168,7 @@ i.member {
     display: inline;
     word-break: break-all;
 }
+
+.product-images img {
+    width: 100%;
+}
