@@ -92,6 +92,12 @@
     <Compile Include="ContrastResult.Designer.cs">
       <DependentUpon>ContrastResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomReport.Designer.cs">
+      <DependentUpon>CustomReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataQuery.cs">
       <SubType>Form</SubType>
     </Compile>

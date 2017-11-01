@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ccButton11 = new SSDC.CCButton();
             this.ccButton10 = new SSDC.CCButton();
@@ -38,6 +38,7 @@
             this.ccButton8 = new SSDC.CCButton();
             this.ccButton7 = new SSDC.CCButton();
             this.ccButton6 = new SSDC.CCButton();
+            this.ccButton12 = new SSDC.CCButton();
             this.ccButton4 = new SSDC.CCButton();
             this.lbTitle = new System.Windows.Forms.Label();
             this.ccButton3 = new SSDC.CCButton();
@@ -46,27 +47,32 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pageControl1 = new SSDC.MyControl.PageControl();
             this.pHintExport = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pageControl1 = new SSDC.MyControl.PageControl();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pCustomReport = new System.Windows.Forms.Panel();
+            this.ccButton13 = new SSDC.CCButton();
             this.pChildMain.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pHintExport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.pHintExport.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.pCustomReport.SuspendLayout();
             this.SuspendLayout();
             // 
             // pChildMain
             // 
-            this.pChildMain.Controls.Add(this.panel1);
+            this.pChildMain.Controls.Add(this.panel5);
             this.pChildMain.Controls.Add(this.panel2);
-            this.pChildMain.Size = new System.Drawing.Size(1224, 741);
+            this.pChildMain.Size = new System.Drawing.Size(1301, 445);
             // 
             // panel2
             // 
@@ -80,6 +86,7 @@
             this.panel2.Controls.Add(this.ccButton8);
             this.panel2.Controls.Add(this.ccButton7);
             this.panel2.Controls.Add(this.ccButton6);
+            this.panel2.Controls.Add(this.ccButton12);
             this.panel2.Controls.Add(this.ccButton4);
             this.panel2.Controls.Add(this.lbTitle);
             this.panel2.Controls.Add(this.ccButton3);
@@ -90,7 +97,7 @@
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1224, 36);
+            this.panel2.Size = new System.Drawing.Size(1301, 36);
             this.panel2.TabIndex = 4;
             // 
             // ccButton11
@@ -101,7 +108,7 @@
             this.ccButton11.Down = false;
             this.ccButton11.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton11.GroupNum = 11;
-            this.ccButton11.Location = new System.Drawing.Point(832, 0);
+            this.ccButton11.Location = new System.Drawing.Point(934, -1);
             this.ccButton11.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton11.Name = "ccButton11";
             this.ccButton11.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -120,7 +127,7 @@
             this.ccButton10.Down = false;
             this.ccButton10.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton10.GroupNum = 11;
-            this.ccButton10.Location = new System.Drawing.Point(728, 0);
+            this.ccButton10.Location = new System.Drawing.Point(830, -1);
             this.ccButton10.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton10.Name = "ccButton10";
             this.ccButton10.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -139,7 +146,7 @@
             this.ccButton5.Down = false;
             this.ccButton5.DownBgColor = global::SSDC.Properties.Resources._05通用按钮_1;
             this.ccButton5.GroupNum = 0;
-            this.ccButton5.Location = new System.Drawing.Point(1032, 8);
+            this.ccButton5.Location = new System.Drawing.Point(1137, 7);
             this.ccButton5.MouseMoveBgColor = global::SSDC.Properties.Resources._05通用按钮_3;
             this.ccButton5.Name = "ccButton5";
             this.ccButton5.NormalBgColor = global::SSDC.Properties.Resources._05通用按钮_1;
@@ -158,7 +165,7 @@
             this.ccButton1.Down = false;
             this.ccButton1.DownBgColor = global::SSDC.Properties.Resources._05通用按钮_1;
             this.ccButton1.GroupNum = 0;
-            this.ccButton1.Location = new System.Drawing.Point(939, 8);
+            this.ccButton1.Location = new System.Drawing.Point(1041, 7);
             this.ccButton1.MouseMoveBgColor = global::SSDC.Properties.Resources._05通用按钮_3;
             this.ccButton1.Name = "ccButton1";
             this.ccButton1.NormalBgColor = global::SSDC.Properties.Resources._05通用按钮_1;
@@ -178,7 +185,7 @@
             this.ccButton9.Down = false;
             this.ccButton9.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton9.GroupNum = 11;
-            this.ccButton9.Location = new System.Drawing.Point(624, 0);
+            this.ccButton9.Location = new System.Drawing.Point(726, -1);
             this.ccButton9.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton9.Name = "ccButton9";
             this.ccButton9.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -197,7 +204,7 @@
             this.ccButton8.Down = false;
             this.ccButton8.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton8.GroupNum = 11;
-            this.ccButton8.Location = new System.Drawing.Point(520, 0);
+            this.ccButton8.Location = new System.Drawing.Point(622, -1);
             this.ccButton8.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton8.Name = "ccButton8";
             this.ccButton8.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -216,7 +223,7 @@
             this.ccButton7.Down = false;
             this.ccButton7.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton7.GroupNum = 11;
-            this.ccButton7.Location = new System.Drawing.Point(416, 0);
+            this.ccButton7.Location = new System.Drawing.Point(518, -1);
             this.ccButton7.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton7.Name = "ccButton7";
             this.ccButton7.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -235,7 +242,7 @@
             this.ccButton6.Down = false;
             this.ccButton6.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton6.GroupNum = 11;
-            this.ccButton6.Location = new System.Drawing.Point(312, 0);
+            this.ccButton6.Location = new System.Drawing.Point(414, -1);
             this.ccButton6.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton6.Name = "ccButton6";
             this.ccButton6.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -246,6 +253,25 @@
             this.ccButton6.BtnClick += new SSDC.CCButton.BtnClickEventHandler(this.button5_Click);
             this.ccButton6.Click += new System.EventHandler(this.ccButton1_Click);
             // 
+            // ccButton12
+            // 
+            this.ccButton12.BackColor = System.Drawing.Color.Transparent;
+            this.ccButton12.BackgroundImage = global::SSDC.Properties.Resources._6页签按钮1;
+            this.ccButton12.BtnText = "自定义报表";
+            this.ccButton12.Down = false;
+            this.ccButton12.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
+            this.ccButton12.GroupNum = 11;
+            this.ccButton12.Location = new System.Drawing.Point(103, -1);
+            this.ccButton12.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
+            this.ccButton12.Name = "ccButton12";
+            this.ccButton12.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
+            this.ccButton12.Size = new System.Drawing.Size(104, 36);
+            this.ccButton12.TabIndex = 4;
+            this.ccButton12.TextColor = System.Drawing.Color.Black;
+            this.ccButton12.TextTop = 13;
+            this.ccButton12.BtnClick += new SSDC.CCButton.BtnClickEventHandler(this.ccButton12_BtnClick);
+            this.ccButton12.Click += new System.EventHandler(this.ccButton1_Click);
+            // 
             // ccButton4
             // 
             this.ccButton4.BackColor = System.Drawing.Color.Transparent;
@@ -254,7 +280,7 @@
             this.ccButton4.Down = false;
             this.ccButton4.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton4.GroupNum = 11;
-            this.ccButton4.Location = new System.Drawing.Point(208, 0);
+            this.ccButton4.Location = new System.Drawing.Point(310, -1);
             this.ccButton4.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton4.Name = "ccButton4";
             this.ccButton4.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -283,7 +309,7 @@
             this.ccButton3.Down = false;
             this.ccButton3.DownBgColor = global::SSDC.Properties.Resources._6页签按钮2;
             this.ccButton3.GroupNum = 11;
-            this.ccButton3.Location = new System.Drawing.Point(104, 0);
+            this.ccButton3.Location = new System.Drawing.Point(206, -1);
             this.ccButton3.MouseMoveBgColor = global::SSDC.Properties.Resources._6页签按钮3;
             this.ccButton3.Name = "ccButton3";
             this.ccButton3.NormalBgColor = global::SSDC.Properties.Resources._6页签按钮1;
@@ -318,7 +344,7 @@
             // 
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(975, 1);
+            this.checkBox1.Location = new System.Drawing.Point(1052, 1);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(108, 16);
             this.checkBox1.TabIndex = 7;
@@ -332,7 +358,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel14.Location = new System.Drawing.Point(0, 35);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1224, 1);
+            this.panel14.Size = new System.Drawing.Size(1301, 1);
             this.panel14.TabIndex = 6;
             // 
             // panel1
@@ -340,9 +366,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 36);
+            this.panel1.Location = new System.Drawing.Point(0, 65);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1224, 705);
+            this.panel1.Size = new System.Drawing.Size(1301, 344);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -352,49 +378,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1224, 669);
+            this.panel3.Size = new System.Drawing.Size(1301, 308);
             this.panel3.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1224, 669);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pageControl1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 669);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1224, 36);
-            this.panel4.TabIndex = 4;
-            // 
-            // pageControl1
-            // 
-            this.pageControl1.BackColor = System.Drawing.Color.White;
-            this.pageControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pageControl1.Location = new System.Drawing.Point(0, 0);
-            this.pageControl1.Name = "pageControl1";
-            this.pageControl1.Size = new System.Drawing.Size(1224, 36);
-            this.pageControl1.TabIndex = 0;
-            this.pageControl1.PageChange += new System.EventHandler(this.pageControl1_PageChange);
             // 
             // pHintExport
             // 
@@ -404,7 +389,7 @@
             this.pHintExport.Controls.Add(this.label2);
             this.pHintExport.Controls.Add(this.label3);
             this.pHintExport.Controls.Add(this.label4);
-            this.pHintExport.Location = new System.Drawing.Point(362, 234);
+            this.pHintExport.Location = new System.Drawing.Point(400, 54);
             this.pHintExport.Name = "pHintExport";
             this.pHintExport.Size = new System.Drawing.Size(500, 200);
             this.pHintExport.TabIndex = 4;
@@ -446,11 +431,90 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "正在导出到EXCEL";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(1301, 308);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pageControl1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 308);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1301, 36);
+            this.panel4.TabIndex = 4;
+            // 
+            // pageControl1
+            // 
+            this.pageControl1.BackColor = System.Drawing.Color.White;
+            this.pageControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pageControl1.Location = new System.Drawing.Point(0, 0);
+            this.pageControl1.Name = "pageControl1";
+            this.pageControl1.Size = new System.Drawing.Size(1301, 36);
+            this.pageControl1.TabIndex = 0;
+            this.pageControl1.PageChange += new System.EventHandler(this.pageControl1_PageChange);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel1);
+            this.panel5.Controls.Add(this.pCustomReport);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 36);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1301, 409);
+            this.panel5.TabIndex = 6;
+            // 
+            // pCustomReport
+            // 
+            this.pCustomReport.BackColor = System.Drawing.Color.White;
+            this.pCustomReport.Controls.Add(this.ccButton13);
+            this.pCustomReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pCustomReport.Location = new System.Drawing.Point(0, 0);
+            this.pCustomReport.Name = "pCustomReport";
+            this.pCustomReport.Size = new System.Drawing.Size(1301, 65);
+            this.pCustomReport.TabIndex = 7;
+            // 
+            // ccButton13
+            // 
+            this.ccButton13.BackColor = System.Drawing.Color.Transparent;
+            this.ccButton13.BackgroundImage = global::SSDC.Properties.Resources._05通用按钮_1;
+            this.ccButton13.BtnText = "查询";
+            this.ccButton13.Down = false;
+            this.ccButton13.DownBgColor = global::SSDC.Properties.Resources._05通用按钮_1;
+            this.ccButton13.GroupNum = 0;
+            this.ccButton13.Location = new System.Drawing.Point(10, 33);
+            this.ccButton13.MouseMoveBgColor = global::SSDC.Properties.Resources._05通用按钮_3;
+            this.ccButton13.Name = "ccButton13";
+            this.ccButton13.NormalBgColor = global::SSDC.Properties.Resources._05通用按钮_1;
+            this.ccButton13.Size = new System.Drawing.Size(90, 26);
+            this.ccButton13.TabIndex = 5;
+            this.ccButton13.TextColor = System.Drawing.Color.White;
+            this.ccButton13.TextTop = 5;
+            this.ccButton13.BtnClick += new SSDC.CCButton.BtnClickEventHandler(this.ccButton13_BtnClick);
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 741);
+            this.ClientSize = new System.Drawing.Size(1301, 445);
             this.Name = "ReportForm";
             this.Text = "ReportForm";
             this.pChildMain.ResumeLayout(false);
@@ -458,10 +522,12 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.pHintExport.ResumeLayout(false);
             this.pHintExport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.pCustomReport.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -492,5 +558,9 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label4;
+        private CCButton ccButton12;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pCustomReport;
+        private CCButton ccButton13;
     }
 }

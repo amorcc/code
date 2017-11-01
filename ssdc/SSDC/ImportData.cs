@@ -260,5 +260,13 @@ namespace SSDC
             this.InitForm();
         }
 
+        private void pChildMain_VisibleChanged(object sender, EventArgs e)
+        {
+            //if (this.pChildMain.Visible == true)
+            //{
+            //    this.InitForm();
+            //}
+        }
+
     }
 }

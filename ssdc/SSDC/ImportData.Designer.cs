@@ -48,6 +48,7 @@
             this.dgvExcel = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnImport = new System.Windows.Forms.Button();
             this.cBoxDataName = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -59,12 +60,11 @@
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnImport = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pChildMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,6 +82,7 @@
             // 
             this.pChildMain.Controls.Add(this.panel1);
             this.pChildMain.Size = new System.Drawing.Size(939, 733);
+            this.pChildMain.VisibleChanged += new System.EventHandler(this.pChildMain_VisibleChanged);
             // 
             // panel1
             // 
@@ -287,6 +288,20 @@
             this.checkBox1.Text = "清空后导入";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // btnImport
+            // 
+            this.btnImport.BackgroundImage = global::SSDC.Properties.Resources.btn0;
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Location = new System.Drawing.Point(430, 85);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(87, 27);
+            this.btnImport.TabIndex = 17;
+            this.btnImport.Text = "立即导入";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
             // cBoxDataName
             // 
             this.cBoxDataName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -386,24 +401,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "导入数据";
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnImport
-            // 
-            this.btnImport.BackgroundImage = global::SSDC.Properties.Resources.btn0;
-            this.btnImport.FlatAppearance.BorderSize = 0;
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImport.ForeColor = System.Drawing.Color.White;
-            this.btnImport.Location = new System.Drawing.Point(430, 85);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(87, 27);
-            this.btnImport.TabIndex = 17;
-            this.btnImport.Text = "立即导入";
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(212)))));
@@ -436,6 +433,10 @@
             this.label13.Size = new System.Drawing.Size(56, 17);
             this.label13.TabIndex = 5;
             this.label13.Text = "导入数据";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // ImportData
             // 

@@ -529,6 +529,7 @@ namespace SSDC.Common
                     cmd.Connection = connection;
                     cmd.CommandText = proName;
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandTimeout = 20000;
                     connection.Open();
                     cmd.ExecuteNonQuery();
                 }

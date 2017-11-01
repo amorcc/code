@@ -31,7 +31,7 @@
                         <img src="/static/images/pwd.png" />
                     </div>
                     <div class="ml40" style="margin-left:40px;">
-                        <input v-model="password" class="w-fill b0 pl10" type="password" placeholder="请输入您的用户名">
+                        <input v-model="password" class="w-fill b0 pl10" type="password" placeholder="请输入您的密码">
                     </div>
                     <div class="clear"></div>
                 </div>

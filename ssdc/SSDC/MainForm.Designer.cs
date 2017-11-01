@@ -41,21 +41,21 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.ccButton10 = new SSDC.CCButton();
             this.button11 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ccButton10 = new SSDC.CCButton();
             this.ccButton9 = new SSDC.CCButton();
             this.ccButton8 = new SSDC.CCButton();
             this.ccButton7 = new SSDC.CCButton();
             this.ccButton6 = new SSDC.CCButton();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.ccButton5 = new SSDC.CCButton();
             this.ccButton4 = new SSDC.CCButton();
             this.ccButton1 = new SSDC.CCButton();
             this.ccButton2 = new SSDC.CCButton();
             this.ccButton3 = new SSDC.CCButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -70,7 +70,7 @@
             this.MainArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainArea.Location = new System.Drawing.Point(0, 0);
             this.MainArea.Name = "MainArea";
-            this.MainArea.Size = new System.Drawing.Size(1130, 541);
+            this.MainArea.Size = new System.Drawing.Size(1230, 541);
             this.MainArea.TabIndex = 5;
             // 
             // panel1
@@ -81,7 +81,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1150, 687);
+            this.panel1.Size = new System.Drawing.Size(1250, 687);
             this.panel1.TabIndex = 6;
             // 
             // panel8
@@ -92,7 +92,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 136);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1150, 541);
+            this.panel8.Size = new System.Drawing.Size(1250, 541);
             this.panel8.TabIndex = 8;
             // 
             // panel22
@@ -101,7 +101,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(10, 0);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(1130, 541);
+            this.panel22.Size = new System.Drawing.Size(1230, 541);
             this.panel22.TabIndex = 5;
             // 
             // panel20
@@ -117,7 +117,7 @@
             // 
             this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
             this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(1140, 0);
+            this.panel15.Location = new System.Drawing.Point(1240, 0);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(10, 541);
             this.panel15.TabIndex = 3;
@@ -130,7 +130,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 677);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1150, 10);
+            this.panel7.Size = new System.Drawing.Size(1250, 10);
             this.panel7.TabIndex = 7;
             // 
             // panel21
@@ -139,14 +139,14 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(10, 0);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(1130, 10);
+            this.panel21.Size = new System.Drawing.Size(1230, 10);
             this.panel21.TabIndex = 2;
             // 
             // panel10
             // 
             this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(1140, 0);
+            this.panel10.Location = new System.Drawing.Point(1240, 0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(10, 10);
             this.panel10.TabIndex = 1;
@@ -168,7 +168,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1150, 136);
+            this.panel2.Size = new System.Drawing.Size(1250, 136);
             this.panel2.TabIndex = 6;
             // 
             // panel6
@@ -191,26 +191,9 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(41, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1088, 136);
+            this.panel6.Size = new System.Drawing.Size(1188, 136);
             this.panel6.TabIndex = 2;
             this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel18_MouseDown);
-            // 
-            // ccButton10
-            // 
-            this.ccButton10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ccButton10.BackgroundImage = global::SSDC.Properties.Resources._3最小化_正常;
-            this.ccButton10.Down = false;
-            this.ccButton10.DownBgColor = global::SSDC.Properties.Resources._3最小化_正常;
-            this.ccButton10.GroupNum = 0;
-            this.ccButton10.Location = new System.Drawing.Point(1019, 0);
-            this.ccButton10.MouseMoveBgColor = global::SSDC.Properties.Resources._3最小化_移上;
-            this.ccButton10.Name = "ccButton10";
-            this.ccButton10.NormalBgColor = global::SSDC.Properties.Resources._3最小化_正常;
-            this.ccButton10.Size = new System.Drawing.Size(23, 42);
-            this.ccButton10.TabIndex = 16;
-            this.ccButton10.TextColor = System.Drawing.Color.White;
-            this.ccButton10.TextTop = 0;
-            this.ccButton10.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -222,72 +205,6 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // ccButton9
-            // 
-            this.ccButton9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ccButton9.BackgroundImage = global::SSDC.Properties.Resources._3最大化_正常;
-            this.ccButton9.Down = false;
-            this.ccButton9.DownBgColor = global::SSDC.Properties.Resources._3最大化_正常;
-            this.ccButton9.GroupNum = 0;
-            this.ccButton9.Location = new System.Drawing.Point(1042, 0);
-            this.ccButton9.MouseMoveBgColor = global::SSDC.Properties.Resources._3最大化_移上;
-            this.ccButton9.Name = "ccButton9";
-            this.ccButton9.NormalBgColor = global::SSDC.Properties.Resources._3最大化_正常;
-            this.ccButton9.Size = new System.Drawing.Size(23, 42);
-            this.ccButton9.TabIndex = 16;
-            this.ccButton9.TextColor = System.Drawing.Color.White;
-            this.ccButton9.TextTop = 0;
-            this.ccButton9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // ccButton8
-            // 
-            this.ccButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ccButton8.BackgroundImage = global::SSDC.Properties.Resources._3关闭_正常;
-            this.ccButton8.Down = false;
-            this.ccButton8.DownBgColor = global::SSDC.Properties.Resources._3关闭_正常;
-            this.ccButton8.GroupNum = 0;
-            this.ccButton8.Location = new System.Drawing.Point(1065, 0);
-            this.ccButton8.MouseMoveBgColor = global::SSDC.Properties.Resources._3关闭_移上;
-            this.ccButton8.Name = "ccButton8";
-            this.ccButton8.NormalBgColor = global::SSDC.Properties.Resources._3关闭_正常;
-            this.ccButton8.Size = new System.Drawing.Size(23, 42);
-            this.ccButton8.TabIndex = 16;
-            this.ccButton8.TextColor = System.Drawing.Color.White;
-            this.ccButton8.TextTop = 0;
-            this.ccButton8.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // ccButton7
-            // 
-            this.ccButton7.BackgroundImage = global::SSDC.Properties.Resources._4系统设置_1;
-            this.ccButton7.Down = false;
-            this.ccButton7.DownBgColor = global::SSDC.Properties.Resources._4系统设置_2;
-            this.ccButton7.GroupNum = 10;
-            this.ccButton7.Location = new System.Drawing.Point(717, 46);
-            this.ccButton7.MouseMoveBgColor = global::SSDC.Properties.Resources._4系统设置_3;
-            this.ccButton7.Name = "ccButton7";
-            this.ccButton7.NormalBgColor = global::SSDC.Properties.Resources._4系统设置_1;
-            this.ccButton7.Size = new System.Drawing.Size(100, 90);
-            this.ccButton7.TabIndex = 16;
-            this.ccButton7.TextColor = System.Drawing.Color.White;
-            this.ccButton7.TextTop = 0;
-            this.ccButton7.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // ccButton6
-            // 
-            this.ccButton6.BackgroundImage = global::SSDC.Properties.Resources._4数据导入记录_1;
-            this.ccButton6.Down = false;
-            this.ccButton6.DownBgColor = global::SSDC.Properties.Resources._4数据导入记录_2;
-            this.ccButton6.GroupNum = 10;
-            this.ccButton6.Location = new System.Drawing.Point(617, 46);
-            this.ccButton6.MouseMoveBgColor = global::SSDC.Properties.Resources._4数据导入记录_3;
-            this.ccButton6.Name = "ccButton6";
-            this.ccButton6.NormalBgColor = global::SSDC.Properties.Resources._4数据导入记录_1;
-            this.ccButton6.Size = new System.Drawing.Size(100, 90);
-            this.ccButton6.TabIndex = 16;
-            this.ccButton6.TextColor = System.Drawing.Color.White;
-            this.ccButton6.TextTop = 0;
-            this.ccButton6.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button3
             // 
@@ -315,13 +232,114 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "潢川县财政社保信息比对系统";
             // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(1229, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(21, 136);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(41, 136);
+            this.panel4.TabIndex = 0;
+            // 
+            // ccButton10
+            // 
+            this.ccButton10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ccButton10.BackgroundImage = global::SSDC.Properties.Resources._3最小化_正常;
+            this.ccButton10.Down = false;
+            this.ccButton10.DownBgColor = global::SSDC.Properties.Resources._3最小化_正常;
+            this.ccButton10.GroupNum = 0;
+            this.ccButton10.Location = new System.Drawing.Point(1119, 0);
+            this.ccButton10.MouseMoveBgColor = global::SSDC.Properties.Resources._3最小化_移上;
+            this.ccButton10.Name = "ccButton10";
+            this.ccButton10.NormalBgColor = global::SSDC.Properties.Resources._3最小化_正常;
+            this.ccButton10.Size = new System.Drawing.Size(23, 42);
+            this.ccButton10.TabIndex = 16;
+            this.ccButton10.TextColor = System.Drawing.Color.White;
+            this.ccButton10.TextTop = 0;
+            this.ccButton10.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // ccButton9
+            // 
+            this.ccButton9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ccButton9.BackgroundImage = global::SSDC.Properties.Resources._3最大化_正常;
+            this.ccButton9.Down = false;
+            this.ccButton9.DownBgColor = global::SSDC.Properties.Resources._3最大化_正常;
+            this.ccButton9.GroupNum = 0;
+            this.ccButton9.Location = new System.Drawing.Point(1142, 0);
+            this.ccButton9.MouseMoveBgColor = global::SSDC.Properties.Resources._3最大化_移上;
+            this.ccButton9.Name = "ccButton9";
+            this.ccButton9.NormalBgColor = global::SSDC.Properties.Resources._3最大化_正常;
+            this.ccButton9.Size = new System.Drawing.Size(23, 42);
+            this.ccButton9.TabIndex = 16;
+            this.ccButton9.TextColor = System.Drawing.Color.White;
+            this.ccButton9.TextTop = 0;
+            this.ccButton9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // ccButton8
+            // 
+            this.ccButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ccButton8.BackgroundImage = global::SSDC.Properties.Resources._3关闭_正常;
+            this.ccButton8.Down = false;
+            this.ccButton8.DownBgColor = global::SSDC.Properties.Resources._3关闭_正常;
+            this.ccButton8.GroupNum = 0;
+            this.ccButton8.Location = new System.Drawing.Point(1165, 0);
+            this.ccButton8.MouseMoveBgColor = global::SSDC.Properties.Resources._3关闭_移上;
+            this.ccButton8.Name = "ccButton8";
+            this.ccButton8.NormalBgColor = global::SSDC.Properties.Resources._3关闭_正常;
+            this.ccButton8.Size = new System.Drawing.Size(23, 42);
+            this.ccButton8.TabIndex = 16;
+            this.ccButton8.TextColor = System.Drawing.Color.White;
+            this.ccButton8.TextTop = 0;
+            this.ccButton8.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // ccButton7
+            // 
+            this.ccButton7.BackgroundImage = global::SSDC.Properties.Resources._4系统设置_1;
+            this.ccButton7.Down = false;
+            this.ccButton7.DownBgColor = global::SSDC.Properties.Resources._4系统设置_2;
+            this.ccButton7.GroupNum = 10;
+            this.ccButton7.Location = new System.Drawing.Point(777, 46);
+            this.ccButton7.MouseMoveBgColor = global::SSDC.Properties.Resources._4系统设置_3;
+            this.ccButton7.Name = "ccButton7";
+            this.ccButton7.NormalBgColor = global::SSDC.Properties.Resources._4系统设置_1;
+            this.ccButton7.Size = new System.Drawing.Size(100, 90);
+            this.ccButton7.TabIndex = 16;
+            this.ccButton7.TextColor = System.Drawing.Color.White;
+            this.ccButton7.TextTop = 0;
+            this.ccButton7.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // ccButton6
+            // 
+            this.ccButton6.BackgroundImage = global::SSDC.Properties.Resources._4数据导入记录_1;
+            this.ccButton6.Down = false;
+            this.ccButton6.DownBgColor = global::SSDC.Properties.Resources._4数据导入记录_2;
+            this.ccButton6.GroupNum = 10;
+            this.ccButton6.Location = new System.Drawing.Point(677, 46);
+            this.ccButton6.MouseMoveBgColor = global::SSDC.Properties.Resources._4数据导入记录_3;
+            this.ccButton6.Name = "ccButton6";
+            this.ccButton6.NormalBgColor = global::SSDC.Properties.Resources._4数据导入记录_1;
+            this.ccButton6.Size = new System.Drawing.Size(100, 90);
+            this.ccButton6.TabIndex = 16;
+            this.ccButton6.TextColor = System.Drawing.Color.White;
+            this.ccButton6.TextTop = 0;
+            this.ccButton6.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // ccButton5
             // 
             this.ccButton5.BackgroundImage = global::SSDC.Properties.Resources._4数据源管理_1;
             this.ccButton5.Down = false;
             this.ccButton5.DownBgColor = global::SSDC.Properties.Resources._4数据源管理_2;
             this.ccButton5.GroupNum = 10;
-            this.ccButton5.Location = new System.Drawing.Point(517, 46);
+            this.ccButton5.Location = new System.Drawing.Point(577, 46);
             this.ccButton5.MouseMoveBgColor = global::SSDC.Properties.Resources._4数据源管理_3;
             this.ccButton5.Name = "ccButton5";
             this.ccButton5.NormalBgColor = global::SSDC.Properties.Resources._4数据源管理_1;
@@ -337,7 +355,7 @@
             this.ccButton4.Down = false;
             this.ccButton4.DownBgColor = global::SSDC.Properties.Resources._4数据查询_2;
             this.ccButton4.GroupNum = 10;
-            this.ccButton4.Location = new System.Drawing.Point(417, 46);
+            this.ccButton4.Location = new System.Drawing.Point(477, 46);
             this.ccButton4.MouseMoveBgColor = global::SSDC.Properties.Resources._4数据查询_3;
             this.ccButton4.Name = "ccButton4";
             this.ccButton4.NormalBgColor = global::SSDC.Properties.Resources._4数据查询_1;
@@ -354,7 +372,7 @@
             this.ccButton1.Down = true;
             this.ccButton1.DownBgColor = global::SSDC.Properties.Resources._4分析结果_2;
             this.ccButton1.GroupNum = 10;
-            this.ccButton1.Location = new System.Drawing.Point(117, 46);
+            this.ccButton1.Location = new System.Drawing.Point(177, 46);
             this.ccButton1.MouseMoveBgColor = global::SSDC.Properties.Resources._4分析结果_3;
             this.ccButton1.Name = "ccButton1";
             this.ccButton1.NormalBgColor = global::SSDC.Properties.Resources._4分析结果_1;
@@ -370,7 +388,7 @@
             this.ccButton2.Down = false;
             this.ccButton2.DownBgColor = global::SSDC.Properties.Resources._4数据分析_21;
             this.ccButton2.GroupNum = 10;
-            this.ccButton2.Location = new System.Drawing.Point(217, 46);
+            this.ccButton2.Location = new System.Drawing.Point(277, 46);
             this.ccButton2.MouseMoveBgColor = global::SSDC.Properties.Resources._4数据分析_3;
             this.ccButton2.Name = "ccButton2";
             this.ccButton2.NormalBgColor = global::SSDC.Properties.Resources._4数据分析_1;
@@ -386,7 +404,7 @@
             this.ccButton3.Down = false;
             this.ccButton3.DownBgColor = global::SSDC.Properties.Resources._4导入数据_2;
             this.ccButton3.GroupNum = 10;
-            this.ccButton3.Location = new System.Drawing.Point(317, 46);
+            this.ccButton3.Location = new System.Drawing.Point(377, 46);
             this.ccButton3.MouseMoveBgColor = global::SSDC.Properties.Resources._4导入数据_3;
             this.ccButton3.Name = "ccButton3";
             this.ccButton3.NormalBgColor = global::SSDC.Properties.Resources._4导入数据_11;
@@ -397,30 +415,12 @@
             this.ccButton3.Load += new System.EventHandler(this.ccButton3_Load);
             this.ccButton3.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1129, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(21, 136);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(41, 136);
-            this.panel4.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1150, 687);
+            this.ClientSize = new System.Drawing.Size(1250, 687);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -21,6 +21,9 @@ namespace SSDC
         public override void InitForm()
         {
             base.InitForm();
+            this.mFileNames.Clear();
+            this.mColNames.Clear();
+            this.mShowTable = new DataTable();
 
             if (this.mShowTable.Columns.Count == 0)
             {
