@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project
+    name="com.ejiang.esft.demo"
+    default="PublishAll" >
+
+  <property file="local.properties" />
+
+  <property file="ant.properties" />
+
+  <property environment="env" />
+
+  <property name="key.store" value="ejiangandroid.key"/>
+  <property name="key.alias" value="ejiangandroid.key"/>
+  <property name="key.alias.password" value="ejiangkey"/>
+  <property name="key.store.password" value="ejiangkey"/>
+  <property name="has.keystore" value=""/>
+  <property name="has.keypassword" value=""/>
+  <property name="version.code" value="111"/>
+
+  <condition property="sdk.dir" value="${env.ANDROID_HOME}" >
+    <isset property="env.ANDROID_HOME" />
+  </condition>
+  <loadproperties srcFile="project.properties" />
+
+  <!-- quick check on sdk.dir -->
+
+  <fail
+      message="sdk.dir is missing. Make sure to generate local.properties using &apos;android update project&apos; or to inject it through the ANDROID_HOME environment variable."
+      unless="sdk.dir" />
+
+  <import file="custom_rules.xml" optional="true" />
+
+  <import file="${sdk.dir}/tools/ant/build.xml" />
+
+  <target name="get-version" >
+    <exec dir="." executable="SubWCRev" >
+      <arg value="."/>
+      <arg value="version.inc"/>
+      <arg value="version.properties"/>
+    </exec>
+
+    <property file="version.properties" />
+    <echo>Version code: ${app.version.code}</echo>
+    <echo>Version name: ${app.version.name}</echo>
+
+    <property name="match.end" value='"' />
+    <property name="matchVersionCode.start" value='android:versionCode=\"' />
+    <replaceregexp file="AndroidManifest.xml" encoding="utf-8" match='${matchVersionCode.start}[^"]*${match.end}' replace="${matchVersionCode.start}${app.version.code}${match.end}" />
+
+    <property name="matchVersionName.start" value='android:versionName=\"' />
+    <replaceregexp file="AndroidManifest.xml" encoding="utf-8" match='${matchVersionName.start}[^"]*${match.end}' replace="${matchVersionName.start}${app.version.name}${match.end}" />
+
+  </target>
+
+  <target name="Build" depends="clean,get-version,release">
+  </target>
+  
+  <target name="PublishAll" depends="Build,UploadToFtp">
+  </target>
+
+  <target name="UploadToFtp">
+    <property name="out.publish.dir" location="${env.TEMP}/OAAndroid/" />
+    <property name="out.publish.file" location="${out.publish.dir}/开发版/${app.version.name}/${ant.project.name}-${app.version.name}.apk" />
+    <delete dir="${out.publish.dir}"/>
+    <mkdir dir="${out.publish.dir}"/>
+    <copy file="${out.final.file}" tofile="${out.publish.file}" overwrite="true" />
+    
+    <echoxml file="${out.publish.dir}/开发版/version.xml">
+      <update>
+        <version>${app.version.code}</version>
+        <name>${app.version.name}</name>
+        <url>
+          ${app.version.name}/${ant.project.name}-${app.version.name}.apk
+        </url>
+      </update>
+    </echoxml>
+
+    <echo file="${out.publish.dir}/开发版/default.htm">
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0.1;url=${app.version.name}/${ant.project.name}-${app.version.name}.apk&quot;/&gt;
+          &lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot;/&gt;
+          &lt;title&gt;&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;a href=&quot;${app.version.name}/${ant.project.name}-${app.version.name}.apk&quot;&gt;${ant.project.name}-${app.version.name}.apk&lt;/a&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    </echo>
+    
+    <exec executable="versions\Build.bat">
+      <arg value="${out.publish.dir}/开发版/"/>
+      <arg value="${out.publish.dir}"/>
+    </exec>
+    
+    <exec executable="ConnectToZ_For5.bat">
+    </exec>
+
+    <copy todir="z:\glOA\glOA\Common_svc">
+      <fileset dir="${out.publish.dir}\测试版">
+        <include name="**"/>
+      </fileset>
+    </copy>
+    
+    <tstamp>
+      <format property="zipfile" pattern="yyyyMMddHHmmss" locale="zh"/>
+    </tstamp>
+    <delete file="${env.TEMP}\zip.tmp"/>
+    <zip destfile="${env.TEMP}\zip.tmp">
+      <fileset dir="${out.publish.dir}">
+        <include name="**"/>
+        <exclude name="**/Web.config"/>
+      </fileset>
+    </zip>
+    <move  file="${env.TEMP}\zip.tmp" tofile="z:\正式版升级包\${ant.project.name}-${app.version.name}_${zipfile}.zip"/>
+
+    <exec executable="net">
+      <arg value="use"/>
+      <arg value="Z:"/>
+      <arg value="/d"/>
+    </exec>
+  </target>
+  <!-- version-tag: 1 -->
+</project>

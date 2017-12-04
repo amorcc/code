@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19FC8E1A-FB5A-4C6F-AD14-D8979C827F3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cc.bll</RootNamespace>
+    <AssemblyName>cc.bll</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cc.basebll\cc.basebll.csproj">
+      <Project>{af5c3bb3-82f5-48e3-9521-1a93e49c4337}</Project>
+      <Name>cc.basebll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cc.basedal\cc.basedal.csproj">
+      <Project>{f6587900-950c-4245-9048-35db92b7225a}</Project>
+      <Name>cc.basedal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cc.basemodel\cc.basemodel.csproj">
+      <Project>{72edeebf-0816-4df2-8120-7154b18ca2ec}</Project>
+      <Name>cc.basemodel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cc.dal\cc.dal.csproj">
+      <Project>{c7814af3-70b6-4914-8651-305027307eaf}</Project>
+      <Name>cc.dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cc.model\cc.model.csproj">
+      <Project>{a4d942a2-eda0-4593-b2b8-63b230bf6fd4}</Project>
+      <Name>cc.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cc.mssql.helper\cc.mssql.helper.csproj">
+      <Project>{1703427e-c77b-4aca-a146-9def11d88256}</Project>
+      <Name>cc.mssql.helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cc.utility\cc.utility.csproj">
+      <Project>{c57c344b-a303-4c5b-838f-f4abd3ac006c}</Project>
+      <Name>cc.utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
