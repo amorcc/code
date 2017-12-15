@@ -1,0 +1,954 @@
+2017-12-15 09:38:03,192 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 18.24ms
+2017-12-15 09:38:04,195 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:38:40,053 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '61918dbd-8c1c-4db3-9c9e-3995a276837c', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 26, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 13, in reg
+    return ResultMessage(rt).GetResult()
+TypeError: GetResult() takes 0 positional arguments but 1 was given
+2017-12-15 09:38:40,057 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 26, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 13, in reg
+    return ResultMessage(rt).GetResult()
+TypeError: GetResult() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 10, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:38:40,058 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg (192.168.1.6) 172.16ms
+2017-12-15 09:39:42,785 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 09:39:53,247 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '6c31e886-81fe-4006-8220-8da8d71471b5', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 26, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 13, in reg
+    return ResultMessage(rt, '', 0).GetResult()
+TypeError: GetResult() takes 0 positional arguments but 1 was given
+2017-12-15 09:39:53,247 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 26, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 13, in reg
+    return ResultMessage(rt, '', 0).GetResult()
+TypeError: GetResult() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 10, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:39:53,247 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg (192.168.1.6) 99.07ms
+2017-12-15 09:40:52,433 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\result_message.py modified; restarting server
+2017-12-15 09:41:13,205 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 116.28ms
+2017-12-15 09:44:45,592 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 3.01ms
+2017-12-15 09:45:05,688 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 1.00ms
+2017-12-15 09:45:05,688 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 0.00ms
+2017-12-15 09:45:05,689 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 0.00ms
+2017-12-15 09:45:05,690 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 0.00ms
+2017-12-15 09:45:05,692 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 0.00ms
+2017-12-15 09:45:05,692 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 0.00ms
+2017-12-15 09:45:05,693 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 0.00ms
+2017-12-15 09:45:05,694 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 0.00ms
+2017-12-15 09:45:05,695 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 1.05ms
+2017-12-15 09:45:05,709 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 1.00ms
+2017-12-15 09:45:05,739 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:45:09,699 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 1.02ms
+2017-12-15 09:45:09,743 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.99ms
+2017-12-15 09:45:14,034 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 1.00ms
+2017-12-15 09:45:16,404 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 1.00ms
+2017-12-15 09:45:16,495 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:45:34,280 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'c76ad9ca-d6c7-4246-af9b-f00e5b0c325d', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 20, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:45:34,283 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 20, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 10, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:45:34,285 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 6.02ms
+2017-12-15 09:45:42,532 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 2.00ms
+2017-12-15 09:45:42,618 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:45:43,141 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 0.00ms
+2017-12-15 09:45:43,185 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:45:43,352 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 1.00ms
+2017-12-15 09:45:43,434 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:45:43,550 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 1.00ms
+2017-12-15 09:45:43,640 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:46:59,239 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:49:41,877 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 0.99ms
+2017-12-15 09:49:41,942 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 1.02ms
+2017-12-15 09:49:43,047 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 2.00ms
+2017-12-15 09:49:43,127 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:49:43,320 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 2.02ms
+2017-12-15 09:49:43,421 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:49:43,532 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 0.00ms
+2017-12-15 09:49:43,582 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:49:59,795 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '14e7697f-2602-4b12-ac8d-543b8b319942', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 23, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:49:59,797 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 23, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:49:59,799 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 5.01ms
+2017-12-15 09:50:25,575 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:50:45,466 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '3a7588f6-c610-45d9-8123-e3db62019019', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 22, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:50:45,469 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 22, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:50:45,470 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 5.01ms
+2017-12-15 09:51:01,171 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:51:04,008 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:51:08,226 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '14cb3765-7961-4a27-bb96-be7bd1f9eb3a', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 23, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:51:08,229 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 23, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:51:08,231 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 4.99ms
+2017-12-15 09:51:19,619 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'f533d632-cb69-4a9d-8bb4-e785de3f78aa', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 23, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:51:23,382 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 23, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:51:23,383 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 3763.74ms
+2017-12-15 09:52:34,823 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:52:39,173 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'ec0d2dd5-2c37-4b89-8596-fd59f793eb7a', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 24, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:52:39,175 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 24, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:52:39,176 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 4.01ms
+2017-12-15 09:53:29,621 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:53:48,273 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '0f8da99c-6b67-4406-926c-ee454807c091', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 24, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:53:48,276 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 3.38ms
+2017-12-15 09:54:35,501 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:56:31,251 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET / (::1) 3.01ms
+2017-12-15 09:56:31,339 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:56:34,738 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '0c2a39d4-4a0a-4b82-b44e-7d406983f9f2', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:56:34,740 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 2.01ms
+2017-12-15 09:56:43,009 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:56:45,485 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '879ae770-2ebd-47a9-acd1-76ba72a6b73b', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:56:45,489 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 3.98ms
+2017-12-15 09:56:52,743 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'a8ce6632-72f2-4d2d-93bd-5f9fa89a6edf', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:04,192 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 11449.19ms
+2017-12-15 09:57:07,973 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '49d447f2-cae4-49e2-b66e-3efebb35e6e5', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:07,975 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 2.01ms
+2017-12-15 09:57:09,966 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '9979c8bb-a39d-4730-a4f8-51c36b9fe878', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:09,972 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 5.05ms
+2017-12-15 09:57:10,739 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '9a285378-53da-41f9-9d90-11770a4633bc', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:10,741 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 3.01ms
+2017-12-15 09:57:11,248 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '352354c9-36d8-4087-9920-ff1b533b8138', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:11,252 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 5.02ms
+2017-12-15 09:57:11,688 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '82a945ea-ed66-4e97-acdd-c4f7007340f6', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:11,692 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 4.07ms
+2017-12-15 09:57:11,911 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'dd13a8a0-9075-461c-8e13-4d8dfd43b730', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:11,913 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 2.04ms
+2017-12-15 09:57:12,124 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'fa316b66-7dba-4c0d-a76a-c688f0334f2f', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:12,126 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 3.01ms
+2017-12-15 09:57:12,316 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '25abe0c7-64d8-4c18-a78e-4e95808d0f2d', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:12,320 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 4.98ms
+2017-12-15 09:57:12,497 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'dd2d6f68-a831-414e-b332-050699a1ba56', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:12,498 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 2.03ms
+2017-12-15 09:57:12,895 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '7cd8e63f-4b1e-4642-ad09-705a159232bd', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:12,897 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 3.01ms
+2017-12-15 09:57:47,770 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:57:50,063 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '8ab0aff7-c634-4fe7-a216-d7944764ce02', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:57:50,067 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:57:50,068 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 7.02ms
+2017-12-15 09:58:04,685 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '97f80f90-eeac-49b8-8e2e-5dfa3f12a163', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:58:13,071 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:58:13,076 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 8391.49ms
+2017-12-15 09:58:13,078 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 0.00ms
+2017-12-15 09:58:13,120 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 1.00ms
+2017-12-15 09:58:18,866 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 1.00ms
+2017-12-15 09:58:18,937 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:58:19,328 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 1.00ms
+2017-12-15 09:58:19,392 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:58:19,573 -- INFO -- tornado.access -- web.py[line:2063]  -- 304 GET / (::1) 1.02ms
+2017-12-15 09:58:19,625 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 GET /favicon.ico (::1) 0.00ms
+2017-12-15 09:58:21,114 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'e49f21cd-228f-4488-a819-7b3fb8237026', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:58:21,115 -- ERROR -- tornado.application -- web.py[line:1038]  -- Uncaught exception in write_error
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1036, in send_error
+    self.write_error(status_code, **kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 12, in write_error
+    logger.error(**kwargs)
+TypeError: error() missing 1 required positional argument: 'msg'
+2017-12-15 09:58:21,117 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 2.95ms
+2017-12-15 09:59:30,053 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 09:59:34,936 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '6280e259-e618-4440-8c25-270150b7bb4b', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:59:34,938 -- ERROR -- handler_base -- handler_base.py[line:12]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 09:59:34,939 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 4.01ms
+----------------------
+2017-12-15 10:00:02,930 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng2/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng2/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '447baf33-f1de-4ce3-b3d9-b53c7912e555', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 10:00:02,932 -- ERROR -- handler_base -- handler_base.py[line:12]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 25, in post
+    amod = __import__("service." + class_name.lower(), fromlist=True)
+ModuleNotFoundError: No module named 'service.usermng2'
+2017-12-15 10:00:02,932 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng2/reg2 (192.168.1.6) 2.01ms
+2017-12-15 10:02:52,756 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:04:17,067 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\result_message.py modified; restarting server
+2017-12-15 10:05:02,866 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:05:14,935 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng2/reg2 (192.168.1.6) 0.99ms
+2017-12-15 10:06:08,154 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:06:12,966 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:06:17,800 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng2/reg2 (192.168.1.6) 1.00ms
+2017-12-15 10:06:21,940 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 91.03ms
+2017-12-15 10:21:12,253 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:21:14,341 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 106.31ms
+2017-12-15 10:21:22,012 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng1/reg2 (192.168.1.6) 0.50ms
+2017-12-15 10:21:26,550 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 1.00ms
+2017-12-15 10:52:18,111 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:52:20,058 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:52:28,525 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 114.30ms
+2017-12-15 10:52:35,460 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'c6bf1861-84c9-43c0-91aa-ec77a05e317b', 'Content-Type': 'text/plain', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '22', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 35, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+2017-12-15 10:52:35,471 -- ERROR -- handler_base -- handler_base.py[line:12]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 35, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+2017-12-15 10:52:35,472 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg2 (192.168.1.6) 13.02ms
+2017-12-15 10:53:58,423 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:54:01,338 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'ad73833b-4694-48f1-88ab-816c149c381b', 'Content-Type': 'text/plain', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '22', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage({}, "请正确传递接口参数信息", 1).GetResult())
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 713, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2017-12-15 10:54:01,348 -- ERROR -- handler_base -- handler_base.py[line:12]  -- 
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage({}, "请正确传递接口参数信息", 1).GetResult())
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 713, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2017-12-15 10:54:01,350 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg2 (192.168.1.6) 140.37ms
+2017-12-15 10:54:13,776 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:54:15,626 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:54:18,096 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '44755e3f-e5ca-4617-a431-c149e354f95b', 'Content-Type': 'text/plain', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '22', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage({}, "请正确传递接口参数信息。", 1).GetResult())
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 713, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2017-12-15 10:54:18,098 -- ERROR -- handler_base -- handler_base.py[line:12]  -- 
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage({}, "请正确传递接口参数信息。", 1).GetResult())
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 713, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2017-12-15 10:54:18,100 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg2 (192.168.1.6) 113.80ms
+2017-12-15 10:54:39,497 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 10:54:46,137 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'ff8e1b6d-0de2-4195-8cc6-a9b4c9f1443d', 'Content-Type': 'text/plain', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '22', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage({}, u"请正确传递接口参数信息。", 1).GetResult())
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 713, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2017-12-15 10:54:46,140 -- ERROR -- handler_base -- handler_base.py[line:12]  -- 
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage({}, u"请正确传递接口参数信息。", 1).GetResult())
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 713, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2017-12-15 10:54:46,141 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg2 (192.168.1.6) 125.83ms
+2017-12-15 10:55:29,443 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\result_message.py modified; restarting server
+2017-12-15 10:56:41,089 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'c2e419eb-0339-4f64-9a5e-8aff6adcc7a4', 'Content-Type': 'text/plain', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '22', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage().ShowParamError())
+TypeError: ShowParamError() missing 1 required positional argument: 'class_name'
+2017-12-15 10:56:42,584 -- ERROR -- handler_base -- handler_base.py[line:12]  -- 
+Traceback (most recent call last):
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 36, in post
+    param = json.loads(param)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\ProgramFiles\Python36\lib\json\decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 3 column 2 (char 19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 38, in post
+    self.write(ResultMessage().ShowParamError())
+TypeError: ShowParamError() missing 1 required positional argument: 'class_name'
+2017-12-15 10:56:42,587 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg2 (192.168.1.6) 1615.43ms
+2017-12-15 10:56:53,674 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\result_message.py modified; restarting server
+2017-12-15 10:56:58,139 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 113.34ms
+2017-12-15 10:56:58,139 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg2 (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg2', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '24f2d422-1235-4dbb-894e-a75cff85a6de', 'Content-Type': 'text/plain', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '22', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 47, in post
+    self.write(ResultMessage().ShowNoServiceError(methon_name))
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 708, in write
+    raise RuntimeError("Cannot write() after finish()")
+RuntimeError: Cannot write() after finish()
+2017-12-15 10:57:11,396 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 0.50ms
+2017-12-15 10:57:17,355 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 0.50ms
+2017-12-15 10:57:22,564 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 0.50ms
+2017-12-15 10:59:36,727 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 11:01:17,096 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg2 (192.168.1.6) 1.00ms
+2017-12-15 11:01:24,416 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.50ms
+2017-12-15 11:01:43,063 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 114.37ms
+2017-12-15 11:01:52,364 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.50ms
+2017-12-15 11:01:55,557 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.48ms
+2017-12-15 11:02:05,550 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 11:02:20,458 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 132.35ms
+2017-12-15 11:02:32,783 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 11:02:37,335 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 111.79ms
+2017-12-15 11:03:24,650 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 11:04:55,971 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\result_message.py modified; restarting server
+2017-12-15 11:05:02,709 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 144.38ms
+2017-12-15 11:05:10,825 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 11:05:12,956 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 119.38ms
+2017-12-15 11:05:20,140 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 11:05:26,894 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 115.82ms
+2017-12-15 11:40:01,990 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 11:43:27,792 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:09:31,270 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:09:51,109 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 112.26ms
+2017-12-15 16:09:51,110 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '3d457165-ffa4-403c-972c-c8d9897f2cff', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '18', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 50, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 14, in reg
+    "token2": param["token"],
+KeyError: 'token'
+2017-12-15 16:10:01,026 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.50ms
+2017-12-15 16:10:01,026 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '2197138c-a6d4-4d31-86c0-173e7c56a198', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 52, in post
+    self.finish(rt)
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 962, in finish
+    raise RuntimeError("finish() called twice")
+RuntimeError: finish() called twice
+2017-12-15 16:10:24,623 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:10:38,004 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 108.79ms
+2017-12-15 16:10:40,243 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.50ms
+2017-12-15 16:10:40,806 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.50ms
+2017-12-15 16:10:41,289 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.47ms
+2017-12-15 16:11:40,046 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 16:13:14,925 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/get_user_info (192.168.1.6) 110.82ms
+2017-12-15 16:13:20,899 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 16:13:29,573 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 111.80ms
+2017-12-15 16:13:32,736 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.44ms
+2017-12-15 16:13:33,024 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 1.00ms
+2017-12-15 16:13:38,297 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.00ms
+2017-12-15 16:14:08,707 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:14:12,334 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 108.79ms
+2017-12-15 16:14:13,150 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 0.50ms
+2017-12-15 16:14:27,004 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\models\models.py modified; restarting server
+2017-12-15 16:14:31,181 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 119.35ms
+2017-12-15 16:15:32,844 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:15:46,674 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:15:49,623 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '31b03336-c0fe-455a-aba1-49c7cd9effe4', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:15:49,624 -- ERROR -- handler_base -- handler_base.py[line:13]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:15:49,625 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg (192.168.1.6) 113.30ms
+2017-12-15 16:16:15,483 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 16:16:23,501 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/reg (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/reg', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'a3a89271-fb9c-4e5e-98ae-801cff7dde5f', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:16:23,502 -- ERROR -- handler_base -- handler_base.py[line:13]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:16:23,503 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/reg (192.168.1.6) 116.31ms
+2017-12-15 16:30:42,799 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\service\usermng.py modified; restarting server
+2017-12-15 16:34:14,501 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/reg (192.168.1.6) 111.80ms
+2017-12-15 16:34:46,467 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:35:24,716 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/login (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/login', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '8c82fd0f-a0bc-4690-8a5f-54d27aaa9f90', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 56, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 27, in login
+    u = LoginUser("username", "usersn_r", "usersn_s")
+  File "D:\cc-space\code\cshop\api\models\logined_user.py", line 11, in __init__
+    self.token = uuid.uuid5()
+TypeError: uuid5() missing 2 required positional arguments: 'namespace' and 'name'
+2017-12-15 16:35:24,718 -- ERROR -- handler_base -- handler_base.py[line:13]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 56, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 27, in login
+    u = LoginUser("username", "usersn_r", "usersn_s")
+  File "D:\cc-space\code\cshop\api\models\logined_user.py", line 11, in __init__
+    self.token = uuid.uuid5()
+TypeError: uuid5() missing 2 required positional arguments: 'namespace' and 'name'
+2017-12-15 16:35:24,719 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/login (192.168.1.6) 115.31ms
+2017-12-15 16:35:50,793 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\models\logined_user.py modified; restarting server
+2017-12-15 16:35:54,021 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/login (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/login', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '8d27c295-1e7c-4976-ac87-2e224157989c', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 56, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 33, in login
+    return ResultMessage(rt).GetResult()
+  File "D:\cc-space\code\cshop\api\service\result_message.py", line 18, in GetResult
+    return json.dumps(rt)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "D:\ProgramFiles\Python36\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\ProgramFiles\Python36\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\ProgramFiles\Python36\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'UUID' is not JSON serializable
+2017-12-15 16:35:54,024 -- ERROR -- handler_base -- handler_base.py[line:13]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 56, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 33, in login
+    return ResultMessage(rt).GetResult()
+  File "D:\cc-space\code\cshop\api\service\result_message.py", line 18, in GetResult
+    return json.dumps(rt)
+  File "D:\ProgramFiles\Python36\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "D:\ProgramFiles\Python36\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\ProgramFiles\Python36\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\ProgramFiles\Python36\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'UUID' is not JSON serializable
+2017-12-15 16:35:54,026 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/login (192.168.1.6) 117.82ms
+2017-12-15 16:37:42,625 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\models\logined_user.py modified; restarting server
+2017-12-15 16:37:48,817 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/login (192.168.1.6) 141.06ms
+2017-12-15 16:38:03,259 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/get_user_info (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/get_user_info', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'f9810f3e-953b-4e51-874e-a776ce4b89aa', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '51', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:38:03,261 -- ERROR -- handler_base -- handler_base.py[line:13]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:38:03,262 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/get_user_info (192.168.1.6) 3.96ms
+2017-12-15 16:39:03,110 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:39:34,200 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/get_user_info (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/get_user_info', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': '276addee-912a-458d-84ee-9a660791e30b', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '51', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:39:34,202 -- ERROR -- handler_base -- handler_base.py[line:13]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 48, in post
+    print(ret.NoLogin)
+AttributeError: 'function' object has no attribute 'NoLogin'
+2017-12-15 16:39:34,203 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/get_user_info (192.168.1.6) 114.30ms
+2017-12-15 16:43:23,733 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\handler_base.py modified; restarting server
+2017-12-15 16:44:00,932 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/get_user_info (192.168.1.6) 108.79ms
+2017-12-15 16:44:04,320 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/login (192.168.1.6) 0.94ms
+2017-12-15 16:44:29,599 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/get_user_info (192.168.1.6) 0.50ms
+2017-12-15 16:46:18,866 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\models\logined_user.py modified; restarting server
+2017-12-15 16:46:25,052 -- ERROR -- tornado.application -- web.py[line:1590]  -- Uncaught exception POST /api/usermng/login (192.168.1.6)
+HTTPServerRequest(protocol='http', host='192.168.1.6:8888', method='POST', uri='/api/usermng/login', version='HTTP/1.1', remote_ip='192.168.1.6', headers={'Cache-Control': 'no-cache', 'Postman-Token': 'f9d9e452-526f-4668-b4e4-1165a69299da', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/6.4.1', 'Accept': '*/*', 'Host': '192.168.1.6:8888', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '19', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 51, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 27, in login
+    u = LoginUser("username", "usersn_r", "usersn_s")
+  File "D:\cc-space\code\cshop\api\models\logined_user.py", line 11, in __init__
+    self.token = uuid.uuid1().toString().replaceAll("\\-", "")
+AttributeError: 'UUID' object has no attribute 'toString'
+2017-12-15 16:46:25,055 -- ERROR -- handler_base -- handler_base.py[line:13]  -- 
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "D:\cc-space\code\cshop\api\handler_base.py", line 51, in post
+    rt = ret(param)
+  File "D:\cc-space\code\cshop\api\service\usermng.py", line 27, in login
+    u = LoginUser("username", "usersn_r", "usersn_s")
+  File "D:\cc-space\code\cshop\api\models\logined_user.py", line 11, in __init__
+    self.token = uuid.uuid1().toString().replaceAll("\\-", "")
+AttributeError: 'UUID' object has no attribute 'toString'
+2017-12-15 16:46:25,056 -- ERROR -- tornado.access -- web.py[line:2063]  -- 500 POST /api/usermng/login (192.168.1.6) 112.30ms
+2017-12-15 16:47:27,272 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\models\logined_user.py modified; restarting server
+2017-12-15 16:47:33,414 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/login (192.168.1.6) 107.78ms
+2017-12-15 16:47:40,123 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/get_user_info (192.168.1.6) 1.00ms
+2017-12-15 16:47:44,553 -- INFO -- tornado.access -- web.py[line:2063]  -- 200 POST /api/usermng/get_user_info (192.168.1.6) 0.50ms
+2017-12-15 17:02:41,283 -- INFO -- tornado.general -- autoreload.py[line:198]  -- D:\cc-space\code\cshop\api\models\models.py modified; restarting server
